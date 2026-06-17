@@ -1,33 +1,39 @@
 /* Ovako se piše komentar */
 
 /* selektori elemenata*/
-body{
+body {
     background-color: antiquewhite;
 }
-h1{
+
+h1 {
     color: #ff00ff;
     text-align: center;
     font-family: sans-serif;
 }
-h2{
+
+h2 {
     color: blue;
 }
 
 /* selektor klase */
-.naslov{
+.naslov {
     color: green;
 
 }
-div p{
+
+div p {
     color: aqua;
 }
 
 /* selektor identifikacije */
-#sadrzaj{
+#sadrzaj {
     font-family: sans-serif;
 }
-ul{
+
+ul {
     list-style: none;
-}ul li::before{
-    content: '⚽';
+}
+
+ul li::before {
+    content: "\26BD";
 }
