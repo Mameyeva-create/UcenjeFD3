@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ-1-2</title>
+    <link rel="stylesheet" href="dz-1-2.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Заголовок/Header-->
+        <header>
+            <h1> POVIJEST HTML-A </h1>
+            <p class="subtitle">OD JEDNOSTAVNOG TEKSTA DO MODERNOG WEBA</p>
+            <hr class="header-line">
+        </header>
+
+            <!-- Первый текст/Intro Section -->
+            <section class="intro">
+                <p>Sve je počelo 1989. godine u CERN-u. Tim Berners-Lee je osmislio sustav koji bi istrsživačima
+                    omogućio
+                    dijeljenje dokumenata. Taj sustav postao je poznat kao
+                    <span class="highlight">World Wide Web.</span></p>
+
+                <div class="image-container">
+                    <img src="slika.png" alt="Tim Berners-Lee">
+                    <p class="caption">Otac weba: Sir Tim Berners-Lee</p>
+                </div>
+                <p>Jezik koji je definirao strukturu tih dokumenata nazvan je HTML (HyperText Markup Language). Njegova
+                    osnovna svrha bila je semantički opisati strukturu dokumenta, a ne njegov izgled.</p>
+
+            </section>
+
+
+            <!-- Версии HTML/Time Line Section -->
+            <section class="timeline">
+                <h2>Ključne verzije</h2>
+                <ol>
+                    <li>
+                        <span class="version-title">01.HTML 1.0 (1991)</span>
+                        <p class="version-desc">Prva neslužbena verzija. Sadržavala je samo 18 tagova.</p>
+                    </li>
+                    <li>
+                        <span class="version-title">02.HTML 2.0 (1995)</span>
+                        <p class="version-desc">Prvi službeni standard (RFC 1866).</p>
+                    </li>
+                    <li>
+                        <span class="version-title">03.HTML 3.2 (1997)</span>
+                        <p class="version-desc">Uvedene tablice i apleti. "Rat preglednika" je bio u punom jeku.</p>
+                    </li>
+                    <li>
+                        <span class="version-title">04.HTML 4.01 (1999)</span>
+                        <p class="version-desc">Dominantna verzija gotovo desetljece. Odvajanje stila (CSS) od sadržaja.
+                        </p>
+                    </li>
+                    <li>
+                        <span class="version-title">05.HTML5 (2014)</span>
+                        <p class="version-desc">Revolucija. Multimedija bez dodataka ('video', 'audio'), semantički
+                            elementi.</p>
+                    </li>
+
+                </ol>
+            </section>
+
+            <!-- Код/Dokument Structure -->
+            <section class="structure">
+                <h2>Struktura Dokumenta</h2>
+                <p>Osnovna struktura HTML5 dokumenta izgleda ovako:</p>
+                <pre><code>&lt;!DOCTYPE html&gt;
+        &lt;html lang="hr"&gt;
+        &lt;head&gt;
+        &lt;title&gt;Naslov&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;p&gt;Pozdrav Svijete!&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;</code></pre>
+                <p class="shortcut-text">Da biste spremili ovaj kod, pritisnite Ctrl + S na tipkovnici.</p>
+            </section>
+
+            <!-- Важные понятия/Terms Section -->
+            <section class="terms">
+                <h2>Važni pojmovi</h2>
+                <div class="terms-box">
+                    <p><strong>HTTP</strong> HyperText Transfer Protocol - protokol za
+                        prijenos podataka.</p>
+                    <p><strong>URI</strong> Uniform Resource Identifier - adresa resursa na webu.</p>
+                </div>
+            </section>
+
+            <!-- Цитата/Philosophy Section -->
+            <section class="philosophy">
+                <h2>Filozofija Weba</h2>
+                <div class="quote-box">
+                    <p class="quote-text">Snaga Weba je u njegovoj univerzalnosti. Pristup svima, bez obzira
+                        na invaliditet, ključni je aspekt.</p>
+                    <p class="quote-author">-Tim Berners-Lee</p>
+                </div>
+            </section>
+
+            <div class="dots">... ..</div>
+
+            <!-- Footer Note -->
+            <section class="closing">
+                <p>Danas HTML koristimo zajedno s CSS-om i JavaScriptom.</p>
+                <p>Japanski naziv za Web: <ruby>網 <rt>ami</rt></ruby>(Mreža).</p>
+            </section>
+
+            <!-- Подвал/Footer -->
+            <footer>
+                <p>Autor stranice: <a class="autor-link" href="#">Web Povjesničar</a></p>
+                <p>Kontakt: <a class="email-link href="mailto:info@povijesthtml.org">info@povijesthtml.org</a></p>
+                <p>27. Listopada 2023.</p>
+
+                <p class="copyright">© Sva prava pridržana.</p>
+            </footer>
+    </div>
+</body>
+
+</html>
