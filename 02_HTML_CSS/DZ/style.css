@@ -1,0 +1,210 @@
+/* 1.CБРОС СТИЛЕЙ И БАЗОВЫЕ НАСТРОЙКИ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Использование современных системных шрифтов для аккуратного вида */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    /*  Cвело-серый фон страницы */
+    background-color: #f4f6f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    min-height: 100vh;
+    padding: 40px;
+}
+
+/* Общий контейнер, задающий максимальную ширину интерфейса */
+.container {
+    width: 100%;
+    max-width: 440px;
+}
+
+/* 2. ИКОНКА ЗАМКА (ВЕРХНЯЯ ЧАСТЬ) */
+.icon-container {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.lock-icon {
+    width: 60px;
+    height: 60px;
+    /* Синий цвет фона иконки */
+    background-color: #2b6cb0;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 32px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* 3.ФОРМА ВХОДА (КАРТОЧКА) */
+.login-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    /* Мягкая тень вокруг карточки */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+/* Рамка вокруг элементов формы */
+fieldset {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 20px;
+    position: relative;
+}
+
+/* Заголовок рамки (Sigurna Prijava */
+legend {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2d3748;
+    padding: 0 12px;
+}
+
+.form-group {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    color: #4a5568;
+    margin-bottom: 6px;
+}
+
+/* Стили для текстовых полей ввода и пароля  */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #3182ce;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 12px 16px;
+border: 1px solid #cbd5e0;
+border-radius: 6px;
+font-size: 14px;
+color: #4a5568;
+outline: none;
+    }
+
+
+/* Блок с чекбоксом "Zapamti ureďaj" */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    cursor: pointer;
+}
+ 
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+/* Кнопка отправки формы (Prijavi se)*/
+.btn-submit {
+    width: 100%;
+    /* Ярко-синий цвет кнопки */
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    /* Плавный переход цвета при наведении */
+    transition: background-color 0.2s;
+}
+
+/* Эффект при наведении курсора на кнопку */
+.btn-submit:hover {
+    background-color: #1d4ed8;
+}
+
+
+
+/* 4.ТАБЛИЦА АКТИВНОСТИ (НИЖНЯЯ ЧАСТЬ */
+.activity-section {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* Заголовок "Nedavne artivnosti prijave" */
+.activity-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #1a202c;
+    margin-bottom: 12px;
+}
+
+.activity-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.activity-table th,
+.activity-table td {
+    padding: 12px;
+    text-align: left;
+    font-size: 13px;
+}
+
+/* Стили для заголовков таблицы IP ADRESA, VRIJEME...) */
+.activity-table th {
+    text-transform: uppercase;
+    color: #1a202c;
+    font-weight: bold;
+    border-bottom: 2px solid #edf2f7;
+}
+
+/* Стили для строк с данными */
+.activity-table td {
+    color: #4a5568;
+    border-bottom: 1px solid #edf2f7;
+}
+
+/* Статус: Успех (зеленый цвет) */
+.status-success {
+    color: green !important;
+    font-weight: 500;
+}
+
+/* Статус: Ошибка (красный цвет) */
+.status-error {
+    color: red !important;
+    font-weight: 500;
+}
+
+/* Подпись под таблицей (Prikaz zadnja 3 pokušaja) */
+.footer-text {
+    text-align: center;
+    font-size: 14px;
+    color: #718096;
+    padding: 16px;
+    background: white;
+    border-top: 1px solid #edf2f7;
+    
+} 

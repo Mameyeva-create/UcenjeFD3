@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigurna Prijava</title>
+    <!-- Подключение внешнего CSS-файла -->
+     <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Верхняя часть -->
+    <div class="container">
+        <!--  Контейнер для иконки замка -->
+        <div class="icon-container">
+            <div class="lock-icon">&#128274;</div>
+        </div>
+
+        <!-- Карточка авторизации  -->
+        <div class="login-card">
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Sigurna Prijava</legend>
+
+                    <!-- Поле ввода логина -->
+                    <div class="form-group">
+                        <label for="username">Korisničko ime</label>
+                        <input type="text" id="username" name="username" value="admin" required>
+                        <!-- id совпадает с for -->
+                    </div>
+
+                    <!-- Поле ввода пароля -->
+                    <div class="form-group">
+                        <label for="password">Lozinka</label>
+                        <input type="password" id="password" name="password" value="******" required>
+                    </div>
+
+                    <!-- Чекбокс запоминания устройства -->
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Zapamti ureďaj</label>
+                    </div>
+
+                    <!-- Кнопка отправки формы  -->
+                    <button type="submit" class="btn-submit">Prijavi se</button>
+                </fieldset>
+            </form>
+        </div>
+        </div>
+
+        <!-- Секция истории активности -->
+         <div class="activity-section">
+            <h2 class="activity-title">Nedavne aktivnosti prijave</h2>
+            <table class="activity-table">
+                <thead>
+                    <tr>
+                        <th>IP adresa</th>
+                        <th>Vrijeme</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>192.168.1.15</td>
+                        <td>12:45</td>
+                        <td class="status-success">Uspjeh</td>
+                    </tr>
+                    <tr>
+                        <td>10.0.0.52</td>
+                        <td>Jučer</td>
+                        <td class="status-error">Greška</td>
+                    </tr>
+                    <tr>
+                        <td>88.102.x.x</td>
+                        <td>01.12.</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Текст под таблицей -->
+             <p class="footer-text">Prikaz zadnja 3 pokušaja</p>
+         </div>
+         </div>
+
+
+
+
+</body>
+
+</html>
