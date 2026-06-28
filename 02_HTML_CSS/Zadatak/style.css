@@ -1,0 +1,99 @@
+/* 1.Сброс базовых отступов и настройка размеров */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* 2.Главная внешняя сетка (Каркас сайта) */
+.grid-container {
+    display: grid;
+    /* 3 колонки: боковые по 100px, центральная занимает все остальное пространство*/
+    grid-template-columns: 100px 1fr 100px;
+    /* 3 строки: шапка (60px), центр (500px), подвал (60px)*/
+    grid-template-rows: 60px 500px 50px;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 3.Общие стили блоков (Центрирование текста и рамки)*/
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #333;
+    border-radius: 2px;
+    /* Серая тень для текста */
+    /* Сдвиг по X (2px), сдвиг по Y (2px), размытие (4px), цвет тени (серый) */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* 4.Цвета и позиционирование внешних блоков в сетке */
+.p1 {
+    background-color: #e74c3c;
+    /* Растягивается на всю ширину сверху*/
+    grid-column: 1 / -1;
+}
+
+.p2 {
+    /* Синий (Левый сайдбар) */
+    background-color: #3498db;
+}
+
+.p4 {
+    /* Фиолетовый (Правый сайдбар) */
+    background-color: #9b59b6;
+}
+
+.p5 {
+    background-color: #2ecc71;
+    /* Растягивается на всю ширину снизу */
+    grid-column: 1 / -1;
+}
+
+/* 5.Внутрення сетка для центральной  белой области */
+.content-center {
+    background-color: #ffffff;
+    border: 1px solid #333;
+    padding: 100px 20px;
+    /* Занимает всю высоту строки в 500px */
+    height: 100%;
+
+    display: grid;
+    /* Разделяем центр на две равные колонки для блоков S2 и S3 */
+    grid-template-columns: 1fr 1fr;
+    /* Обе строки с контентом делаем фиксированными и узкими по 30px */
+    grid-template-rows: 20px 20px;
+    /* Расталкивает строку S1 наверх, а строку S2 / S3 вниз, создавая пустоту */
+    align-content: space-between;
+    gap: 20px;
+}
+
+/*  6.Позиционирование врутренних элементов (S1, S2 и S3)*/
+.s1 {
+    background-color: #f1c40f;
+    /* Занимает обе колонки центральной области */
+    grid-column: 1 / -1;
+    grid-row: 1;
+}
+
+.s2 {
+    background-color: #e67e22;
+    /* Размещен на второй строке */
+    grid-row: 2;
+}
+
+.s3 {
+    background-color: #1abc9c;
+    /* Размещаем на второй строке во второй колонке */
+    grid-row: 2;
+}
