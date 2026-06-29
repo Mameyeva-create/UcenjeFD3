@@ -1,0 +1,241 @@
+/* 1. ОБЩИЕ СТИЛИ СТРАНИЦЫ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: #f5ebe1;
+    color: #333333;
+    padding: 20px 10px;
+}
+
+/* 2. ШАПКА И НАВИГАЦИЯ */
+.main-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.main-header h1 {
+    color: #8a0f0f;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.main-header .subtitle {
+    font-style: italic;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.double-line {
+    max-width: 500px;
+    margin: 0 auto 15px auto;
+    border: none;
+    border-top: 4px double #8a0f0f;
+    height: 0;
+}
+
+.navbar {
+    max-width: 500px;
+    margin: 0 auto 20px auto;
+    background-color: #8a0f0f;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* 3. КАРТОЧКИ И СЕКЦИИ */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0d5c8;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.section-title {
+    color: #333;
+    font-size: 1.3rem;
+    /* Красная линия слева */
+    border-left: 5px solid #8a0f0f;
+    padding-left: 12px;
+    margin-bottom: 20px;
+}
+
+/* Сетка для первой секции (иекст слева, видео справа) */
+.grid-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 15px;
+    align-items: start;
+}
+
+/* Адаптивность для мобильных телефонов */
+@media (max-width: 480px) {
+    .grid-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.text-block p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    color: #333;
+}
+
+/* 4. АДАПТИВНЫЙ ВИДЕОПЛЕЕР (ЗАГЛУШКА) */
+.video-container {
+    width: 100%;
+}
+
+.video-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #222;
+    /* Фоновое изображение заглушка */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('slika.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+/* Красная кнопка Play */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 34px;
+    background-color: #ff0000;
+    border-radius: 9px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Эффект при наведении на область видео */
+.video-placeholder:hover .play-button {
+    background-color: #cc0000;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+
+/* Белый треугольник внутри кнопки */
+.play-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-width: 7px 0 7px 12px;
+    border-color: transparent transparent transparent #ffffff;
+}
+
+/* 5.ТАБЛИЦА ПЕРСОНАЖЕЙ */
+.characters-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.characters-table th,
+.characters-table td {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    text-align: left;
+}
+
+.characters-table th {
+    background-color: #8a0f0f;
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.characters-table tr:nth-child(even) {
+    /* Зебра-эффект для строк  */
+    background-color: #fafafa;
+
+}
+
+/* 6.ФОРМА ОБРАТНОЙ СВЯЗИ */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+/* Кнопка отправки формы */
+.btn-submit {
+    background-color: #8a0f0f;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.btn-submit:hover {
+    background-color: #a31414;
+}
+
+/* 7.ПОДВАЛ СТРАНИЦЫ */
+.main-footer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #666;
+    margin-top: 20px;
+}

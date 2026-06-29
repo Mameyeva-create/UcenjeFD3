@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadaca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!--  Шапка сайта -->
+    <header class="main-header">
+        <h1>Tko pjeva zlo ne misli</h1>
+        <p class="subtitle">Dnevnik malog Perice</p>
+    </header>
+
+    <hr class="double-line">
+
+    <!-- Навигация -->
+    <nav class="navbar">
+        <a href="#radnja">Radnja</a>
+        <a href="#likovi">Likovi</a>
+        <a href="#pisi-nam">Piši nam</a>
+    </nav>
+
+    <!-- Основной контент  -->
+    <main class="container">
+
+        <!-- Секция описание -->
+        <section id="radnja" class="card">
+            <h2 class="section-title">O čemu se radi?</h2>
+            <div class="grid-content">
+                <div class="text-block">
+                    <p>Radnja filma smještena je u <strong>Zagreb</strong> sredinom tridesetih godina 20. stoljeća</p>
+                    <p>Sve se vrti oko obitelji Šafranek i njihovih bračnih zgoda i nezgoda, začinjenih pjesmom i
+                        izletima u Maksimir.</p>
+                    <blockquote class="quote">"Ljubim ruke, milostiva!"</blockquote>
+                </div>
+                <div class="video-container">
+
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция: Персонажи -->
+        <section id="likovi" class="card">
+            <h2 class="section-title">Glavni likovi</h2>
+            <table class="characters-table">
+                <thead>
+                    <tr>
+                        <th>Ime</th>
+                        <th>Uloga</th>
+                        <th>Osobina</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Franjo</td>
+                        <td>Otac</td>
+                        <td>Voli gemišt i politiku</td>
+                    </tr>
+                    <tr>
+                        <td>Ana</td>
+                        <td>Majka</td>
+                        <td>Romantična duša</td>
+                    </tr>
+                    <tr>
+                        <td>Perica</td>
+                        <td>Sin</td>
+                        <td>Promatrač</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Секция: Форма обратной связи -->
+        <section id="pisi-nam" class="card">
+            <h2 class="section-title">Pošalji pismo u Gornji Grad</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Tvoje ime:</label>
+                    <input type="text" id="name" placeholder="Npr. Mina" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Poruka:</label>
+                    <textarea id="message" rows="4" required></textarea>
+                </div>
+                <!-- Кнопка -->
+                 <button type="submit" class="btn-submit">Pošalji golubom</button>
+            </form>
+        </section>
+
+    </main>
+
+<!-- Подвал сайта -->
+ <footer class="main-footer">
+    <p>&copy; 2025. Edunova</p>
+ </footer>
+
+</body>
+
+</html>
