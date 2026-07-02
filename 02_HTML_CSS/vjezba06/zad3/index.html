@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zad3</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ФОРМА ДЛЯ НОВОГО ПОЛЬЗОВАТЕЛЯ -->
+    <form action="obrada-podataka" method="post">
+        <fieldset>
+            <legend>Novi Korisnik</legend>
+
+            <div class="form-groupa">
+                <label class="naslov-polja">Ime i Prezime:</label>
+                <input type="text" name="ime i prezime" placeholder="npr. Ana Anic" required>
+            </div>
+
+            <div class="form-groupa">
+                <label class="naslov-polja">Email adresa:</label>
+                <input type="email" id="Email-adresa" name="email" placeholder="npr. ana@email.com" required>
+            </div>
+
+            <div class="form-groupa">
+                <label class="naslov-polja">Uloga:</label>
+                <input type="text" name="uloga" placeholder="Obični korisnik">
+            </div>
+            <button>Spremi Korisnika</button>
+        </fieldset>
+    </form>
+
+
+    <!-- TABLICA KORISNIKA -->
+    <div class="tablica-conteiner">
+        <table class="lista-korisnika">
+            <caption>lista-korisnika</caption>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>IME I PREZIME</th>
+                    <th>EMAIL</th>
+                    <th>ULOGA</th>
+                    <th>AKCIJA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Ivan Horvat</td>
+                    <td>ivan@tvrtka.hr</td>
+                    <td>Administrator</td>
+                    <td><button class="gumb-obrisi">Obrisi</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Marko Maric</td>
+                    <td>marko@tvrtka.hr</td>
+                    <td>Urednik</td>
+                    <td><button class="gumb-obrisi">Obrisi</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Petra Peric</td>
+                    <td>petra@tvrtka.hr</td>
+                    <td>Korisnik</td>
+                    <td><button class="gumb-obrisi">Obrisi</button></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Luka Lukić</td>
+                    <td>luka@tvrtka.hr</td>
+                    <td>Korisnik</td>
+                    <td><button class="gumb-obrisi">Obrisi</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html
