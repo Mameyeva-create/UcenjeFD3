@@ -1,65 +1,148 @@
 :root {
-    --pozadina-boja: #f2f0f0;
+    --pozadina-boja: #f4f6f9;
     --panel-boja: white;
+}
 
 body {
     background-color: var(--pozadina-boja);
     font-family: sans-serif;
-    padding: 20px;
+    padding: 40px 20px;
+    margin: 0;
 }
 
 form {
-    max-width: 500px;
-  margin-right: auto;
+    max-width: 960px;
+    margin: 0 auto 40px auto;
 }
 
 fieldset {
-background-color: white;
-border-radius: 7px;
-border: none;
-border: 1px solid #ccc;
-/* padding-block: var(--panel-boja); */
-
+    background-color: var(--panel-boja);
+    border-radius: 8px;
+    border: none;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
 }
 
 legend {
-   font-weight: bold;
-    padding: 0 10px;
-    color: #333 
+    display: inline-block;
+    width: max-content;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.5rem;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #007bff; /* Синяя линия под названием формы */
+    margin-bottom: 25px;
 }
-form-groupa {
-   margin-bottom: 15px; 
+
+
+
+.form-groupa {
+    margin-bottom: 20px;
+
 }
 
 .naslov-polja {
     display: block;
-    font-weight: normal;
-    margin-bottom: 25px;
-    color: #444;
-
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 0.95rem;
 }
 
-input {
+input,
+select {
     width: 100%;
-    padding: 8px;
+    padding: 11px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    font-size: 1rem;
+    color: #333;
+    background-color: white;
 }
 
-/* ДЕЛАЕТ КУРСИВНЫМ ПОДСКАЗКИ В ПОЛЯХ ВВОДА (placeholder) */
+/* Стиль плейсхолдеров */
 input::placeholder {
-    font-style: ;
     color: #999;
 }
-/* Стили для таблицы */
-.tablica-conteiner
 
-.caption{
-   /* Переносит надпись НАД таблицей */ 
-   caption-side: top;
-padding-bottom: 0;
-  font-family: sans-serif;
-  font-weight: 10px;
+/* Зеленая кнопка отправки формы */
+.gumb-spremi {
+    background-color: #24b14d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
 }
-th, td
+
+.gumb-spremi:hover {
+    background-color: #1e9640;
+}
+
+/* Стили для таблицы */
+.tablica-conteiner {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: var(--panel-boja);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    box-sizing: border-box;
+}
+.naslov-tablice {
+    display: inline-block;    /* Синяя линия будет строго по ширине текста */
+    width: max-content;
+    margin-top: 0;
+    margin-bottom: 25px;      /* Отступ от заголовка до самой таблицы */
+    font-weight: bold;
+    color: #333; 
+    font-size: 1.5rem;
+    padding-bottom: 8px;      /* Отступ от текста до синей линии */
+    border-bottom: 3px solid #007bff; /* Синяя линия под текстом */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 12px;
+    text-align: left;
+}
+
+
+/* Синяя шапка таблицы */
+th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+/* Легкое выделение четных строк (эффект зебры) */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.gumb-obrisi {
+    background-color:transparent;
+    color: #ff4d4d;
+    border: none;
+   font-weight: bold;
+   cursor: pointer;
+    padding: 0;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.gumb-obrisi:hover {
+   text-decoration: underline;
+}

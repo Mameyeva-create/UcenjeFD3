@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zad3</title>
+    <title>Vjezba3</title>
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -28,17 +28,22 @@
 
             <div class="form-groupa">
                 <label class="naslov-polja">Uloga:</label>
-                <input type="text" name="uloga" placeholder="Obični korisnik">
+                <select name="uloga" required>
+                    <option value="obicni">Obični korisnik</option>
+                    <option value="urednik">Urednik</option>
+                    <option value="administrator">Administrator</option>
+                    </select>
+
             </div>
-            <button>Spremi Korisnika</button>
+            <button type="submit" class="gumb-spremi">Spremi Korisnika</button>
         </fieldset>
     </form>
 
 
-    <!-- TABLICA KORISNIKA -->
+    <!-- ТАБЛИЦА ПОЛЬЗОВАТЕЛЕЙ -->
     <div class="tablica-conteiner">
+        <h2 class="naslov-tablice">lista-korisnika</h2>
         <table class="lista-korisnika">
-            <caption>lista-korisnika</caption>
             <thead>
                 <tr>
                     <th>ID</th>
@@ -54,28 +59,28 @@
                     <td>Ivan Horvat</td>
                     <td>ivan@tvrtka.hr</td>
                     <td>Administrator</td>
-                    <td><button class="gumb-obrisi">Obrisi</button></td>
+                    <td><button type="button" class="gumb-obrisi">Obrisi</button></td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>Marko Maric</td>
                     <td>marko@tvrtka.hr</td>
                     <td>Urednik</td>
-                    <td><button class="gumb-obrisi">Obrisi</button></td>
+                    <td><button type="button" class="gumb-obrisi">Obrisi</button></td>
                 </tr>
                 <tr>
                     <td>3</td>
                     <td>Petra Peric</td>
                     <td>petra@tvrtka.hr</td>
                     <td>Korisnik</td>
-                    <td><button class="gumb-obrisi">Obrisi</button></td>
+                    <td><button type="button" class="gumb-obrisi">Obrisi</button></td>
                 </tr>
                 <tr>
                     <td>4</td>
                     <td>Luka Lukić</td>
                     <td>luka@tvrtka.hr</td>
                     <td>Korisnik</td>
-                    <td><button class="gumb-obrisi">Obrisi</button></td>
+                    <td><button type="button" class="gumb-obrisi">Obrisi</button></td>
                 </tr>
             </tbody>
         </table>
