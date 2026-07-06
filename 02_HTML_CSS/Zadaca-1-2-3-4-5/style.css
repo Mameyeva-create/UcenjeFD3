@@ -1,0 +1,317 @@
+/* --- Base Styles / Osnovni stilovi --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* --- Hero & Navbar --- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://unsplash.com') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 8px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #ccff00;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ccff00;
+}
+
+
+
+.hero-content {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 100px;
+
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #ccff00;
+    color: #121212;
+    padding: 12px 35px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #b3ff00;
+}
+
+/* --- Section Layouts / Sekcije --- */
+
+section {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #ffffff;
+}
+
+/* --- Services / Usluge --- */
+.services {
+    background-color: #181818;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.services-card {
+    background-color: #242424;
+    padding: 40px 30px;
+    border-radius: 6px;
+    transition: transform 0.3s;
+}
+
+.services-card:hover {
+    transform: translateY(-5px);
+}
+
+.services-card h3 {
+    font-size: 1.4rem;
+    color: #ccff00;
+    margin-bottom: 15px;
+}
+
+.services-card p {
+    color: #aaaaaa;
+    font-size: 0.95rem;
+}
+
+/* --- Pricing Table / Cjenik --- */
+.pricing {
+    background-color: #121212;
+}
+
+.section-subtitle {
+    color: #aaaaaa;
+    margin-top: -40px;
+    margin-bottom: 40px;
+}
+
+.table-container {
+    overflow: auto;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #181818;
+    text-align: left;
+}
+
+.pricing-table th,
+.pricing-table td {
+    padding: 18px 25px;
+    border-bottom: 1px solid #282828;
+}
+
+
+.pricing-table th {
+    background-color: #ccff00;
+    color: #121212;
+    font-weight: 700;
+}
+
+.pricing-table td {
+    color: #dddddd;
+}
+
+.pricing-table tr:hover {
+    background-color: #202020;
+}
+
+.price {
+    font-weight: 700;
+    color: #ccff00 !important;
+}
+
+/* --- Video Section --- */
+.video-section {
+    background-color: #181818;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 56.25%;
+    /* Omjer 16:9 */
+    height: 0;
+}
+
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+}
+
+/* --- Contact Section / Kontakt --- */
+.contact {
+    background-color: #121212;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    text-align: left;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contact-info h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.contact-info p {
+    color: #aaaaaa;
+    margin-bottom: 15px;
+}
+
+/* --- Form Styles / Stilovi Forme --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 15px;
+    color: #cccccc;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Prvi label ne treba gornji razmak */
+.contact-form label:first-of-type {
+    margin-top: 0;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    background-color: #242424;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s;
+}
+
+/* Стиль для текстового поля/Stil za tekstualno područje */
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Efekt kada kliknete na polje */
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #ccff00;
+}
+
+.btn-submit {
+    background-color: #ccff00;
+   color: #121212;
+   padding: 14px;
+   font-weight: 700; 
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   margin-top: 25px;
+   font-size: 1rem;
+   letter-spacing: 1px;
+   transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #b3ff00;
+}
+
+/* --- Footer --- */
+.main-footer {
+    background-color: #0b0b0b;
+    padding: 40px 8%;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666666;
+    border-top: 1px solid #181818;
+}
+
+

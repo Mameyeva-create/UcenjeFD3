@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadaca-1-2-3-4-5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Заголовок и Главный Раздел-->
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">FITNES TRENER</div>
+            <ul class="nav-links">
+                <li><a href="#">Početna</a></li>
+                <li><a href="#">Programi</a></li>
+                <li><a href="#">Cjenik</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>TRANSFORMIRAJ SVOJE TIJELO</h1>
+            <p>Profesionalno vodenje, planovi prehrane i motivacija koja ti treba.</p>
+            <a href="#" class="btn-primary">ZAPOČNI DANAS</a>
+        </div>
+    </header>
+
+
+    <!-- Раздел Услуг/Services Section -->
+    <section class="services">
+        <h2>Što nudimo?</h2>
+        <div class="services-grid">
+            <div class="services-card">
+                <h3>Osobni Trening</h3>
+                <p>Jedan na jedan rad s certificianim trenerom u teretani. Fokus na pravilno izvodenjevjezbi i
+                    maksimalne rezultate.</p>
+            </div>
+            <div class="services-card">
+                <h3>Plan Prehrane</h3>
+                <p>Personaliziani jelovnici prilagodeni tojim
+                    cilievima, bilo da zelis smrsaviti ill dobiti misicnu
+                    masu.</p>
+            </div>
+            <div class="services-card">
+                <h3>Online Mentorstvo</h3>
+                <p>Treniraj bilo gdje i bilo kada uz nasu aplikaciju,
+                    video upute i tjedne check-in konzultacije.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел Цены/Pricing Section -->
+    <section class="pricing">
+        <h2>Paketi i Cijene</h2>
+        <p class="section-subtitle">Mjesečni paketi usluga</p>
+        <div class="table-container">
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>USLUGA</th>
+                        <th>TRAJANJE</th>
+                        <th>CIJENA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Start Paket</strong> (3 treninga tjedno)</td>
+                        <td>1 Mjesec</td>
+                        <td class="price">150 €</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pro Paket</strong>(5 treninga tjedno + prehrana)</td>
+                        <td>1 Mjesec</td>
+                        <td class="price">250 €</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Online Coaching</strong></td>
+                        <td>1 Mjesec</td>
+                        <td class="price">100 €</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Plan Prehrane</strong> (Samo izrada)</td>
+                        <td>Jednokratno</td>
+                        <td class="price">50 €</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="video-conteiner">
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/cbKkB3POqaY?si=K9VLqE48_3_SoBv5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+            <iframe src="https://youtube.com" title="25 Min Full Body Beginner Workout" frameborder="0"
+                allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Javi nam se</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Fitnes Centar "Olimp"</h3>
+                <p>Ilica 270, 10000 Zagreb</p>
+                <p>Hrvatska</p>
+                <p><strong>Email:</strong>info@fitnestrener.hr</p>
+                <p><strong>Tel:</strong> +385 91 123 4567</p>
+                <p><strong>Radno vrijeme:</strong><br>06:00 - 22:00</p>
+            </div>
+            <div class="contact-form-container">
+                <form class="contact-form">
+                    <!-- Поле Email с подписью -->
+                    <label for="ime">Ime i Prezime:</label>
+                    <input type="text" id="ime" placeholder="Ime i Prezime:" required>
+                    <label for="email">Email adresa:</label>
+                    <input type="email" id="id-email" placeholder="primjer@mail.com" required>
+                    <label for="cilj">Vaš glavni cilj:</label>
+                    <select id="cilj" required>
+                        <option value="mrsavljenje" selected>Mršavljenje</option>
+                        <!-- <option value="misici">Izgradnja mišićne mase</option>
+        <option value="kondicija">Kondicija</option> -->
+ </select>
+                    <textarea name="Poruka:" placeholder="Opišite svoje trenutno stanje..." required></textarea>
+                    <button type="submit" class="btn-submit">POŠALJI UPIT</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2023 Fitnes Trener. Sva prava pridržana.</p>
+        <p>Pravila privatnosti / Uvjeti korištenja</p>
+    </footer>
+
+</body>
+
+</html>
