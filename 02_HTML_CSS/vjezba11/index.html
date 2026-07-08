@@ -1,0 +1,78 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RWD Foundation</title>
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+
+  <div class="grid-container">
+    <!-- Početak izbornik -->
+    <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle></button>
+      <div class="title-bar-title">Izbornik</div>
+    </div>
+
+    <div class="top-bar" id="example-menu">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text">Edunova</li>
+          <li class="has-submenu">
+            <a href="#0">Tehnologije</a>
+            <ul class="submenu menu vertical" data-submenu>
+              <li><a href="#0">GIT</a></li>
+              <li><a href="#0">HTML &amp CSS</a></li>
+              <li><a href="#0">RWD</a></li>
+              <li> <a href="#0">JS</a></li>
+            </ul>
+          </li>
+          <li><a href="#0">Završni rad</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Kraj izbornik -->
+
+    <!-- Grid sustav -->
+    <div class="grid-x">
+      <div style="background-color: blue;" class="large-4 medium-6 cell">A</div>
+      <div style="background-color: green;" class="large-8 medium-6 cell">B</div>
+      <div style="background-color: red;" class="large-6 cell">C</div>
+      <div style="background-color: purple;" class="large-6 cell">D</div>
+    </div>
+    <!-- Kraj Grid sustav -->
+
+    <!-- Zadatak: Isprobati što veći -->
+     <ul class="tabs" data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-tabs id="deeplinked-tabs">
+  <li class="tabs-title is-active"><a href="#panel1d" aria-selected="true">Tab 1</a></li>
+  <li class="tabs-title"><a href="#panel2d">Tab 2</a></li>
+  <li class="tabs-title"><a href="#panel3d">Tab 3</a></li>
+  <li class="tabs-title"><a href="#panel4d">Tab 4</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="deeplinked-tabs">
+  <div class="tabs-panel" id="panel2d">
+    <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+  </div>
+  <div class="tabs-panel" id="panel3d">
+    <img class="thumbnail" src="assets/img/generic/rectangle-3.jpg">
+  </div>
+  <div class="tabs-panel" id="panel4d">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </div>
+</div>
+  </div>
+
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/what-input.js"></script>
+  <script src="js/vendor/foundation.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
