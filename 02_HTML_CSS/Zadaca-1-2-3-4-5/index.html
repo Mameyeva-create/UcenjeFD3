@@ -12,6 +12,7 @@
 
     <!-- Заголовок и Главный Раздел-->
     <header class="hero">
+        <!-- Верхняя линия навигации вне фотографии -->
         <nav class="navbar">
             <div class="logo">FITNES TRENER</div>
             <ul class="nav-links">
@@ -21,10 +22,14 @@
                 <li><a href="#">Kontakt</a></li>
             </ul>
         </nav>
-        <div class="hero-content">
-            <h1>TRANSFORMIRAJ SVOJE TIJELO</h1>
-            <p>Profesionalno vodenje, planovi prehrane i motivacija koja ti treba.</p>
-            <a href="#" class="btn-primary">ZAPOČNI DANAS</a>
+
+        <!-- Контейнер для фонового фото и текста поверх него -->
+        <div class="hero-content-wrapper">
+            <div class="hero-content">
+                <h1>TRANSFORMIRAJ SVOJE TIJELO</h1>
+                <p>Profesionalno vodenje, planovi prehrane i motivacija koja ti treba.</p>
+                <a href="#" class="btn-primary">ZAPOČNI DANAS</a>
+            </div>
         </div>
     </header>
 
@@ -54,49 +59,53 @@
 
     <!-- Раздел Цены/Pricing Section -->
     <section class="pricing">
-        <h2>Paketi i Cijene</h2>
-        <p class="section-subtitle">Mjesečni paketi usluga</p>
-        <div class="table-container">
-            <table class="pricing-table">
-                <thead>
-                    <tr>
-                        <th>USLUGA</th>
-                        <th>TRAJANJE</th>
-                        <th>CIJENA</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Start Paket</strong> (3 treninga tjedno)</td>
-                        <td>1 Mjesec</td>
-                        <td class="price">150 €</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Pro Paket</strong>(5 treninga tjedno + prehrana)</td>
-                        <td>1 Mjesec</td>
-                        <td class="price">250 €</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Online Coaching</strong></td>
-                        <td>1 Mjesec</td>
-                        <td class="price">100 €</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Plan Prehrane</strong> (Samo izrada)</td>
-                        <td>Jednokratno</td>
-                        <td class="price">50 €</td>
-                    </tr>
-                </tbody>
-            </table>
+        <!-- Добавлен общий серый контейнер для заголовка и таблицы -->
+        <div class="pricing-card-wrapper">
+            <h2>Paketi i Cijene</h2>
+            <p class="section-subtitle">Mjesečni paketi usluga</p>
+            <div class="table-container">
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>USLUGA</th>
+                            <th>TRAJANJE</th>
+                            <th>CIJENA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Start Paket</strong> (3 treninga tjedno)</td>
+                            <td>1 Mjesec</td>
+                            <td class="price">150 €</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pro Paket</strong>(5 treninga tjedno + prehrana)</td>
+                            <td>1 Mjesec</td>
+                            <td class="price">250 €</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Online Coaching</strong></td>
+                            <td>1 Mjesec</td>
+                            <td class="price">100 €</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Plan Prehrane</strong> (Samo izrada)</td>
+                            <td>Jednokratno</td>
+                            <td class="price">50 €</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
 
     <!-- Video Section -->
     <section class="video-section">
-        <div class="video-conteiner">
-            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/cbKkB3POqaY?si=K9VLqE48_3_SoBv5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-            <iframe src="https://youtube.com" title="25 Min Full Body Beginner Workout" frameborder="0"
-                allowfullscreen></iframe>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/cbKkB3POqaY?si=gvpQrcNL92JQfpL3"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </section>
 
@@ -106,11 +115,12 @@
         <div class="contact-container">
             <div class="contact-info">
                 <h3>Fitnes Centar "Olimp"</h3>
-                <p>Ilica 270, 10000 Zagreb</p>
+                <p>Ilica 200, 10000 Zagreb</p>
                 <p>Hrvatska</p>
-                <p><strong>Email:</strong>info@fitnestrener.hr</p>
+                <p><strong>Email:</strong><span class="highlight-email">info@fitnestrener.hr</span></p>
                 <p><strong>Tel:</strong> +385 91 123 4567</p>
-                <p><strong>Radno vrijeme:</strong><br>06:00 - 22:00</p>
+                <!-- Класс normal-text отменяет курсив строго для рабочего времени -->
+                <p class="normal-text"><strong>Radno vrijeme:</strong><br>06:00 - 22:00</p>
             </div>
             <div class="contact-form-container">
                 <form class="contact-form">
@@ -118,14 +128,15 @@
                     <label for="ime">Ime i Prezime:</label>
                     <input type="text" id="ime" placeholder="Ime i Prezime:" required>
                     <label for="email">Email adresa:</label>
-                    <input type="email" id="id-email" placeholder="primjer@mail.com" required>
+                    <input type="email" id="email" placeholder="primjer@mail.com" required>
                     <label for="cilj">Vaš glavni cilj:</label>
                     <select id="cilj" required>
                         <option value="mrsavljenje" selected>Mršavljenje</option>
-                        <!-- <option value="misici">Izgradnja mišićne mase</option>
-        <option value="kondicija">Kondicija</option> -->
- </select>
-                    <textarea name="Poruka:" placeholder="Opišite svoje trenutno stanje..." required></textarea>
+                        <option value="misici">Izgradnja mišićne mase</option>
+                        <option value="kondicija">Kondicija</option>
+                    </select>
+                    <label for="poruka">Poruka:</label>
+                    <textarea id="poruka:" placeholder="Opišite svoje trenutno stanje..." required></textarea>
                     <button type="submit" class="btn-submit">POŠALJI UPIT</button>
                 </form>
             </div>
