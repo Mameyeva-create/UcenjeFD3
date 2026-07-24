@@ -1,63 +1,57 @@
 /* УРОК 12. МАССИВЫ (Arrays)*/
 
-// Для возвращеня результата, чтобы использовать его дальше, существует return
-
+// До сих пор мы хранили Одно Значение в Одной Переменной
 //  Например:
-// function sum(a, b){
-//     return a + b;
-// }
-// let result = sum(5, 3);
-// console.log(result); // 8
+let city = 'Osijek';
 
+//  Если нужно хранить много Значений
+// Можно так:
+let city1 = 'Osijek';
+let city2 = 'Zagreb';
+let city3 = 'Split';
+// Это неудобно, для этого существуют МАССИВЫ
 
-// // Пример:
-// function multiply(a, b){
-//     return a * b;
-// }
-// console.log(multiply(4, 5)); // 20
+/* СОЗДАНИЕ МАССИВА */
+// Пример:
+let cities = ['Osijek', 'Zagreb', 'Split'];
 
-// // Пример:
-// function test(){
-//     return 10;
-// }
-// let number = test(); // число 10 храниться в переменной number
-// console.log(number);
+// Массив выглядит как полка с ячейками:
+// Osijek  Zagreb  Split
+//    0      1       2
 
-// ДЗ 12
+// Получить элемент массива: 
+console.log(cities[0]); // Osijek
+console.log(cities[1]); // Zagreb
+console.log(cities[2]); // Split
+
+/* МАССИВ ЧИСЕЛ */
+// let numbers = [10, 20, 30, 40];
+
+// // Получить первое число:
+// console.log(numbers[0]); // 10
+
+// // Получить последнее число:
+// console.log(numbers[3]); // 40
+
+// ДЗ 13
 
 // Задание 1
-function sum(a, b){
-    return a + b;
-}
-console.log(sum(10, 5));
+let fruits = ['Яблоко', 'Банан', 'Апельсин'];
 
+console.log(fruits[0]);
+console.log(fruits[1]);
+console.log(fruits[2]);
 
 //Задание 2
-function multiply(a, b){
-    return a * b;
-}
-console.log(multiply(6, 7));
+let numbers = [5, 10, 15, 20];
+ 
+console.log(numbers[0]); // 5
+console.log(numbers[3]); // 20
 
 // Задание 3
-function minus(a, b){
-    return a - b;
-}
-console.log(minus(4, 8)); // -4
-console.log(minus(345, 128)); 
+let colors =['Orchid','Peri', 'Lime'];
+console.log(colors[1]); // Peri
 
-// Например:
-let total = sum(10, 5);
-console.log(total); // 15
-
-// Пример:
-let result = sum(10, 5) * 2;
-console.log(result) // 30
-
-//  Пример:
-function square(number){
-    return number * number;
-}
-console.log(square(4)); // 16
 
 
 
