@@ -82,13 +82,14 @@ rezultat.innerHTML =  'NIJE prim'
       // kraj rješavanje 2. zadatak
     break;
     case '3':
+
       // rješavanje 3. zadatak
 
       // kraj rješavanje 3. zadatak
     break;
     case '4':
       // rješavanje 4. zadatak
-      // rješavanje 4. zadatak
+     
       // 4. Za unesenu riječ u polje A provjerite da li je palindrom ili ne
       // Ružan Edo ode na žur
       // ružanedoodenažur
@@ -100,7 +101,7 @@ rezultat.innerHTML =  'NIJE prim'
       }
      }
      let palindrom = true
-     for(let i = 0; p.length / 2; i++){
+     for(let i = 0; i < p.length / 2; i++){
       if(p[i] !== p[p.length - 1 - i]){
         palindrom = false
         break
