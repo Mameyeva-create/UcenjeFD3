@@ -25,18 +25,39 @@ ul li a {
     text-align: justify;
     padding: 1.5em;
 }
+
 /* Mobitel */
-.a {grid-area: a;}
-.b {grid-area: b;}
-.c {grid-area: c;}
-.d {grid-area: d;}
-.e {grid-area: e;}
-.f {grid-area: f;}
-@media (max-width: 549px) {
-    
-.a, .b, .f {
-display: none;
+.a {
+    grid-area: a;
 }
+
+.b {
+    grid-area: b;
+}
+
+.c {
+    grid-area: c;
+}
+
+.d {
+    grid-area: d;
+}
+
+.e {
+    grid-area: e;
+}
+
+.f {
+    grid-area: f;
+}
+
+@media (max-width: 549px) {
+
+    .a,
+    .b,
+    .f {
+        display: none;
+    }
 }
 
 /* Tablet */
@@ -45,13 +66,17 @@ display: none;
         background-color: beige;
     }
 
- main {
+    main {
         display: grid;
         grid-template-areas:
             "b b"
             "c f";
-    
-    .a, .d, .e { display: none;}
+
+        .a,
+        .d,
+        .e {
+            display: none;
+        }
     }
 
     .panel {
@@ -71,7 +96,7 @@ display: none;
             "a b b"
             "c d e"
             "f f f";
-    } 
+    }
 }
 
 @media print {
