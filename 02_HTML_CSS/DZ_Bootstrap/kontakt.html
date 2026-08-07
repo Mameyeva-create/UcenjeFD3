@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | FPV Akademija</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">FPV Akademija</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="false" aria-label="Otvori navigaciju">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Početna</a></li>
+                    <li class="nav-item"><a class="nav-link" href="program.html">Program</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="kontakt.html">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Glavni sadržaj -->
+    <main class="container py-5">
+        <!-- Naslov -->
+        <section class="text-center mb-5">
+            <h1 class="display-5 fw-bold">Prijava na FPV Akademiju</h1>
+            <p class="lead">Ispunite obrazac i prijavite se na naš FPV tečaj.</p>
+        </section>
+        <!-- Kontakt / Prijava -->
+        <section>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 class="mb-4">Prijavni obrazac</h2>
+                            <!-- Form -->
+                            <form class="needs-validation" novalidate>
+                                <!-- Ime i prezime -->
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="ime" name="ime"
+                                        placeholder="Ime i prezime" required>
+                                    <label for="ime">Ime i prezime</label>
+                                    <div class="invalid-feedback">Molimo unesite ime i prezime</div>
+                                </div>
+                                <!-- Email -->
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="name@example.com" required>
+                                    <label for="email">E-mail adresa</label>
+                                    <div class="invalid-feedback">Molimo unesite ispravnu e-mail adresu</div>
+                                </div>
+                                <!-- Telefon -->
+                                <div class="form-floating mb-3">
+                                    <input type="tel" class="form-control" id="telefon" placeholder="Telefon" required>
+                                    <label for="telefon">Broj telefona</label>
+                                    <div class="invalid-feedback">Molimo unesite broj telefona</div>
+
+                                </div>
+                                <!-- Select -->
+<div class="mb-3"><label for="program" class="form-label">Odaberite program</label>
+<select class="form-select" id="program" name="program" required>
+    <option value="" selected disabled>Odaberite program</option>
+    <option value="pocetni">Početni FPV tečaj</option>
+    <option value="napredni">Napredni FPV tečaj</option>
+    <option value="individualni">Individualna obuka</option>
+</select>
+<div class="invalid-feedback">Molimo odaberite program</div>
+</div>
+<!-- Floating Label - Poruka -->
+ <div class="form-floating mb-3">
+    <textarea class="form-control" id="poruka" name="poruka" placeholder="Vaša poruka" style="height: 150px;" required></textarea>
+    <label for="poruka">Vaša poruka</label>
+    <div class="invalid-feedback">Molimo unesite poruku</div>
+ </div>
+ <!-- Checkbox -->
+  <div class="form-check mb-4">
+    <input class="form-check-input" type="checkbox" id="suglasnost" required>
+    <label class="form-check-label" for="suglasnost">Slažem se s obradom podataka potrebnih za prijavu</label>
+    <div class="invalid-feedback">Potrebno je potverditi suglasnost</div>
+  </div>
+  <!-- Gumb -->
+   <button type="submit" class="btn btn-primary">Pošalji prijavu</button>
+   <button type="reset" class="btn btn-secondary ms-2">Obriši</button>
+   </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+     <footer class="text-white text-center py-4">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 FPV Akademija</p>
+            <p class="mb-0">Tečaj FPV dronova za početnike</p>
+        </div>
+     </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Form validation -->
+     <script>
+        (() => {
+            'use strict';
+            const forms = document.querySelectorAll('.needs-validation');
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        })();
+     </script>
+</body>
+
+</html>

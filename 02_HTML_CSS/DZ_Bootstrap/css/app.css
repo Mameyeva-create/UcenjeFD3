@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ==========================
+   HERO
+========================== */
+.hero {
+    background: #0d6efd;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+   
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 1.2rem;
+}
+
+/* ==========================
+   CAROUSEL
+========================== */
+.carousel img {
+    height: 550px;
+    object-fit: cover;
+}
+
+/* ==========================
+   CARDS
+========================== */
+.card {
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+footer {
+    margin-top: 50px;
+}
+
+/* ==========================
+  RESPONSIVE
+========================== */
+@media (max-width:992px) {
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .carousel img {
+        height: 420px;
+    }
+}
+
+@media (max-width:768px) {
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .carousel img {
+        height: 320px;
+    }
+}
+
+@media (max-width:576px) {
+    .hero {
+        padding: 50px 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero p {
+        font-size: .95rem;
+    }
+
+    .carousel img {
+        height: 220px;
+    }
+
+    form .btn {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-bottom: 10px;
+    }
+}
+/* ==========================
+  NAVBAR I FOOTER
+========================== */
+.navbar.bg-dark,
+footer.bg-dark { 
+    background-color: #0d6efd !important;
+}
+html,
+body {
+    min-height: 100%;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1;
+}
+footer {
+    background-color: #0d6efd !important;
+}
+.navbar {
+    background-color: #0d6efd !important;
+}
+.navbar-brand,
+.navbar .nav-link:hover {
+    color: #e0e0e0 !important;
+}
+.navbar .nav-link.active {
+    color: white !important;
+}
