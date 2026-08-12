@@ -1,0 +1,15 @@
+body {
+    background-image: url('../img/Slika5.jpg');
+    background-repeat: no-repeat;
+    /* background-position: center center; */
+    background-attachment: fixed;
+    background-size: cover;
+    /* background-color: blanchedalmond; */
+}
+@font-face {
+    font-family: 'Edunova'; /* даем свое название */
+    src: url('../fonts/ClashGrotesk-Regular.woff2') format('woff2');
+}
+h1 {
+    font-family: 'Edunova','Times New Roman', serif ; /* font fallback */ /* 'Arial', sans-serif; -подтягиваем из списка - или -'Times New Roman', serif; */
+}
