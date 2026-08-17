@@ -12,32 +12,31 @@ let rez // undefined
 // ALGORITAM
 rez = a + b
 // IZLAZ
-console.log('rez', rez)  // 5
+console.log('rez', rez)  // rez, 5
 
 // neće biti primjere za - * /
 
-// modulo operator (%) 
+// modulo operator (%) - остаток от деления
 // ostatsk nakon cjelobrojnog djeljenja
 
 // 9 % 2 = 1
 // 4 * 2 = 8
 // 9 - 8 = 1 <- ovo je rezultat
 
-console.log('9 % 2', 9 % 2) // 1 
-console.log('8 % 2', 8 % 2) // 0
+console.log('9 % 2', 9 % 2) // 9 % 2, 1 
+console.log('8 % 2', 8 % 2) // 8 % 2, 0
 
 // modulo se najčešće koristi pri odreďivanju parnosti broja
 
-// operatori dodjele
+// operatori dodjele - операторы Назначения
 
-rez += 2 //isto kao i rez = rez +2
-console.log('rez+=2', rez)
+rez += 2 // isto kao i rez = rez +2
+console.log('rez+=2', rez) // rez+=2, 7
 
-
-// debugger
+// debugger - инструмент, устанавливается в коде, где программа временно останавливается
+ // debugger
 rez = rez + 3
-
-console.log('rez=rez+3', rez)
+console.log('rez=rez+3', rez) // rez=rez+3, 10
 
 // postoje i -=, *=, /=
 
@@ -49,29 +48,34 @@ rez = rez + 1 // 11
 rez += 1 // 12
 rez++ // 13 -> ovaj način zapisa se nikada ne bi trebao koristiti sam u linij
 
-
-// inkrement ++ i dekrement --
-// dvojaku ulogu
+// inkrement(увеличение) ++ i dekrement(уменьшение) --
+// dvojaku ulogu(роль)
 // kada se koristi i kada se uvećava / smanjuje
 
 let i = 0
-
 //prvo koristi pa uvećaj
-console.log('i++', i++) // 0 -> nakon ispisa i=1
+console.log('i++', i++) // i++, 0
+// i++ - постфиксный инкремент
 
-// prvo uvećaj pa koristi
-console.log('++i', ++i) // 2    -> 1 + 1 daje 2 i onda to ispiše
-
+// 0 -> nakon ispisa i=1
+// prvo uvećaj pa koristi - uvječava sebe samog na 1
+console.log('++i', ++i) //++i, 2    -> 1 + 1 daje 2 i onda to ispiše
+// ++i - префиксный инкремент
 
 // isto sve vrijedi i za --
 
 // ovo može biti na razgovoru za posao 
-//debugger
+// debugger
 i = 2
 let j = 1
-i = j++ - i // 1-2     j = 2, i = -1
-j += --i - ++j // i= - 2 -3 = -5, j= -3
-console.log(i - j) //1
+i = j++ - i // 1-2= -1   
+// i = -1, j = 2
+
+/*** += означает взять прежний  j  и прибавить  ***/
+j += --i - ++j // (i = - 2 -3 = -5)
+// j = -5 - 
+// i = -2, j = -2
+console.log(i - j) // ( -2 - (-2)) = 0
 
 //operatori usporeďivanja == ===
 
