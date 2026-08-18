@@ -171,7 +171,8 @@ console.log(sifra ?? 'šifra nije postavljena')
 // optional chaining operater ( ?. )
 
 // idemo vidjeti što radi točka (.)
-
+// В JS - точка( . ), используется, чтобы обратиться к свойству или методу объекта( зайди внутрь объекта и возьми чтото из него)
+// Например: объект внутри объекта
 const korisnik = {
     adresa: {
         grad: 'Osijek',
@@ -180,7 +181,10 @@ const korisnik = {
 }
 console.log(korisnik.adresa.grad) // Osijek
 console.log(korisnik?.adresa?.ulica?.toUpperCase() ?? 'Nije postavljeno')
-
+/* 
+объект.свойство
+объект.метод() 
+*/
 
 
 
