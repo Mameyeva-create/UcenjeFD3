@@ -74,12 +74,14 @@ i = j++ - i // 1-2= -1
 /*** += означает взять прежний  j  и прибавить  ***/
 j += --i - ++j // (i = - 2 -3 = -5)
 // j = -5 - 
-// i = -2, j = -2
-console.log(i - j) // ( -2 - (-2)) = 0
+// i = -2, j = -3
+console.log(i - j) // ( -2 - (-3)) = 1
 
-//operatori usporeďivanja == ===
+//operatori usporeďivanja(Сравнения) == ===
 
 //razlićito !=, !==
+// != НЕ РАВНО - Сравнивает только значения
+// !== СТРОГО НЕ РАВНО -Сравнивает и Значения и Типы
 console.log(5 != 4) // true
 console.log('5' != 5) // false
 console.log('5' !== 5) // true
@@ -113,30 +115,32 @@ console.log('Može u disko', ispunjenUvjet && imaNovaca) // true
 console.log(!imaNovaca)
 
 
-//ternarni operator ?:
+//ternarni operator ? -Тернарный
+// Условие ? Значение_если _истина : Значение_если_ложь
 console.log(godine >= 18 ? 'Punoljetan' : 'Maloljetan')
 
 // operator spajanja  - nadoljeplivanja (concatination)
 // +
 // + je operator zbrajanja kada se radi o dva broj
 // u svim ostalim situacijama + spaja
-console.log('Marko ima' + godine + 'godina') // ovo nije baš najbolje
-
+console.log('Marko ima ' + godine + ' godina') // ovo nije baš najbolje
+// выражения равны, в нижнем используем, baktiks ( ` )
 console.log(`Marko ima ${godine} godina`)
 
 const x = '7', y = 5
-console.log(x + y) //75
+console.log(x + y) // 75
+// при одинаковых типах данных сложит, разные типы соединяет
 
-//spread operator - operator proširivanja(...)
+//spread operator - operator proširivanja(...) 
+// - может распаковать, копировать и объудинять массивы 
 
 const niz = [2, 1] // konstanta koja se ne može mijenjati
-
 console.table(niz)
 
 const noviNiz =[0, ...niz, 3]
-
 console.table(noviNiz)
 
+// с объектами
 const osoba ={
     ime: 'Pero',
     prezime: 'Perić'
@@ -144,28 +148,29 @@ const osoba ={
 
 const polaznik ={
     ...osoba,
-    edukacia: 'FD'
+    edukacija: 'FD'
 }
 
-// suprotno od proširivanja (...) je destructing operator
+// suprotno od proširivanja (...)  - je destructing operator:
 
 const[prvi, drugi] = [1,2] // dobijemo varijable prvi i drugi koje imaju vrijednost 1 i 2
-
 console.log(prvi, drugi)
 
 const{prezime, ...meniBitno} = polaznik
 // prezime je ovdje otpadak - ne treba nama, ali mi je naćin da iz polaznika maknem prezime
-
 console.log(meniBitno) // imam ime i edukacija, bez prezimena
 
-
+// nullish calescing operator ( ?? )
+// ako je vrijednost varijable null ili undefined koristi nešto grugo
 let sifra
 console.log(sifra ?? 'Šifra nije postavljena')
+ 
+sifra =1
+console.log(sifra ?? 'šifra nije postavljena')
 
-// optional chaining operater ?.
+// optional chaining operater ( ?. )
 
-// idemo vidjeti što radi točca (.)
-
+// idemo vidjeti što radi točka (.)
 
 const korisnik = {
     adresa: {
@@ -173,7 +178,6 @@ const korisnik = {
         ulica: 'Trg'
     }
 }
-
 console.log(korisnik.adresa.grad) // Osijek
 console.log(korisnik?.adresa?.ulica?.toUpperCase() ?? 'Nije postavljeno')
 
