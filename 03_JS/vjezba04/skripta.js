@@ -8,7 +8,7 @@ document.getElementById('btnRun').addEventListener('click', () => {
 
     const task = document.getElementById('taskSelect').value
     let rezultat
-// debugger
+    // debugger
     // Za svaki zadatak zahtijevamo određene ulaze
     if (task === '1') {
         // Početak 1. zadatka
@@ -16,95 +16,84 @@ document.getElementById('btnRun').addEventListener('click', () => {
         const aBroj = Number(a)
         const bBroj = Number(b)
         rezultat = aBroj + bBroj
-        
         // Kraj 1. zadatka
     }
 
     if (task === '2') {
         // Početak 2. zadatka
         // 2. Konkatenacija: Spoji A i B kao tekst (String)
-
-rezultat = a + b
-
+        rezultat = a + b
         // Kraj 2. zadatka
-        
     }
 
     if (task === '3') {
         // Početak 3. zadatka
         // 3. Aritmetika i zagrade: Izračunaj (A + B) * C - D
-const aBroj = Number(a)
-const bBroj = Number(b)
-const cBroj = Number(c)
-const dBroj = Number(d)
-rezultat = (aBroj + bBroj)* cBroj - dBroj 
+        const aBroj = Number(a)
+        const bBroj = Number(b)
+        const cBroj = Number(c)
+        const dBroj = Number(d)
+        rezultat = (aBroj + bBroj) * cBroj - dBroj
         // Kraj 3. zadatka
-        
     }
 
     if (task === '4') {
         // Početak 4. zadatka
         // 4. Modulo operator: Ostatak pri dijeljenju A s B (A % B)
-
-const aBroj = Number(a)
-const bBroj = Number(b)
-rezultat = aBroj % bBroj
-
-// Kraj 4. zadatka
-        
+        const aBroj = Number(a)
+        const bBroj = Number(b)
+        rezultat = aBroj % bBroj
+        // Kraj 4. zadatka
     }
 
     if (task === '5') {
         // Početak 5. zadatka
         // 5. Stroga jednakost: Jesu li A i B identični po vrijednosti i tipu (A === B)?
-
-const aBroj = Number(a)
-const bBroj = Number(b)
-rezultat = (aBroj===bBroj)
+        const aBroj = Number(a)
+        const bBroj = Number(b)
+        rezultat = (aBroj === bBroj)
         // Kraj 5. zadatka
-        
     }
 
     if (task === '6') {
         // Početak 6. zadatka
         // 6. Relacijski operatori: Je li zbroj A i B veći od umnoška C i D?
-const aBroj = Number(a)
-const bBroj = Number(b)
-const cBroj = Number(c)
-const dBroj = Number(d)
-rezultat =(aBroj + bBroj) >= (cBroj* dBroj)
-
+        const aBroj = Number(a)
+        const bBroj = Number(b)
+        const cBroj = Number(c)
+        const dBroj = Number(d)
+        rezultat = (aBroj + bBroj) >= (cBroj * dBroj)
         // Kraj 6. zadatka
-        
     }
 
     if (task === '7') {
         // Početak 7. zadatka
         // 7. Logički AND (&&): Je li A pozitivno I istovremeno B parno?
-const aBroj = Number(a)
-const bBroj = Number(b)
-rezultat = (aBroj >= 0) &&(bBroj % 2 ===0)
-
+        const aBroj = Number(a)
+        const bBroj = Number(b)
+        rezultat = (aBroj >= 0) && (bBroj % 2 === 0)
         // Kraj 7. zadatka
-        
     }
 
     if (task === '8') {
         // Početak 8. zadatka
         // 8. Logički OR (||): Je li barem jedno od polja C ili D prazan string?
-rezultat = c ===''|| d ===''
-
+        rezultat = c === '' || d === ''
         // Kraj 8. zadatka
-        
     }
 
     if (task === '9') {
         // Početak 9. zadatka
         // 9. Operator typeof: Ispiši tip podatka za izraz (A * B)
-
-
+        if (a === '' || b === '') {
+            rezultat = ''
+        } else if (isNaN(a) || isNaN(b)) {
+            rezultat = 'A ili B nisu brojevi'
+        } else {
+            rezultat = typeof (Number(a) * Number(b))
+        }
         // Kraj 9. zadatka
-        
+
     }
 
     if (task === '10') {
@@ -113,7 +102,7 @@ rezultat = c ===''|| d ===''
 
 
         // Kraj 10. zadatka
-        
+
     }
     if (task === '11') {
         // Početak 11. zadatka
