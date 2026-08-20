@@ -93,21 +93,23 @@ document.getElementById('btnRun').addEventListener('click', () => {
             rezultat = typeof (Number(a) * Number(b))
         }
         // Kraj 9. zadatka
-
     }
 
     if (task === '10') {
         // Početak 10. zadatka
         // 10. Ternarni operator: Ako je A > B ispiši vrijednost C, inače ispiši D
-
-
+if (a > b){
+    rezultat = (c)
+}else{
+    rezultat = (d)
+}
+// rezultat = (aBroj > bBroj) ? c : d
         // Kraj 10. zadatka
-
     }
     if (task === '11') {
         // Početak 11. zadatka
         // 11. Inkrement / Dekrement: Izračunaj trik izraz (A++ - --B)
-
+      rezultat = (a-(b-1))
 
         // Kraj 11. zadatka
     }
@@ -115,15 +117,19 @@ document.getElementById('btnRun').addEventListener('click', () => {
     if (task === '12') {
         // Početak 12. zadatka
         // 12. Različito (!= vs !==): Usporedi A i B po vrijednosti (!=) i po tipu (!==)
-
-
+        if (a != b && a !== b){
+            rezultat = true
+        } else {
+            rezultat = false
+        }
         // Kraj 12. zadatka
     }
 
     if (task === '13') {
         // Početak 13. zadatka
         // 13. Nullish Coalescing (??): Ako je A prazan string, koristi default vrijednost iz B
-
+        rezultat =  a === '' ? b : a
+        // rezultat = a ?? b
 
         // Kraj 13. zadatka
     }
@@ -131,7 +137,7 @@ document.getElementById('btnRun').addEventListener('click', () => {
     if (task === '14') {
         // Početak 14. zadatka
         // 14. Array i Spread operator (...): Spoji [A, B] i [C, D] u jedan novi niz
-
+        rezultat = [...[a, b],...[c, d]]
 
         // Kraj 14. zadatka
     }
@@ -139,15 +145,16 @@ document.getElementById('btnRun').addEventListener('click', () => {
     if (task === '15') {
         // Početak 15. zadatka
         // 15. Destrukturiranje niza: Iz niza [A, B, C, D] izvuci prva dva elementa u zasebne varijable i ispiši ih u konzolu
-
-
+rezultat = [...a, b]
+// console.log[a, b]
         // Kraj 15. zadatka
     }
 
     if (task === '16') {
         // Početak 16. zadatka
         // 16. Rad s objektima: Kreiraj JSON objekt { ime: A, grad: B } i ispiši ga u konzolu
-
+     
+       rezultat = [ a, b]
 
         // Kraj 16. zadatka
     }
@@ -155,7 +162,7 @@ document.getElementById('btnRun').addEventListener('click', () => {
     if (task === '17') {
         // Početak 17. zadatka
         // 17. Optional Chaining (?.): Sigurno pročitaj svojstvo iz ugniježđenog objekta
-
+rezultat = a?.b?.c?.d;
 
         // Kraj 17. zadatka
     }
