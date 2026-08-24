@@ -35,7 +35,7 @@ if (score >= 90) {
   console.log('Отлично');
 } else if (score >= 75) {
   console.log('Хорошо');
-} else if(score >=60){
+} else if (score >= 60) {
   console.log('Удовлетворительно');
 } else {
   console.log('Не сдал');
@@ -44,10 +44,12 @@ if (score >= 90) {
 // Задание 3
 let hour = 20;
 
-if(hour < 12) {
+if (hour < 12) {
   console.log('Доброе утро');
-  } else if(hour < 18) {
-    console.log(' Добрый день')
-  } else { 
-    console.log('Добрый вечер');
-  }
+} else if (hour < 18) {
+  console.log(' Добрый день')
+} else {
+  console.log('Добрый вечер');
+}
+
+
