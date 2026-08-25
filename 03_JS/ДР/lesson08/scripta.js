@@ -2,7 +2,7 @@
 
 // Для проверки сразу несколько условий, есть три оператора:
 
-/* 1. && - И
+/* 1. && - И ( ЗНАК АМПЕРСАНД)
 Означает:
 Оба условия должны быть истинными. */
 
@@ -30,7 +30,7 @@ if (iceCreamPrice < moneyInWallet && isStoreOpen) {
   console.log('Магазин закрыт :(')
 }
 
-const reSult = 'Привет' && true && 5 && null && 10 
+const reSult = 'Привет' && true && 5 && null && 10
 console.log(reSult) // null
 
 // Пример:
@@ -62,6 +62,9 @@ isYoung && console.log('Покажите паспорт!')
 
 const result = '' || false || null || undefined || 0 || 'Привет' || 'Пока'
 // выполнение происходит с_лева_направо_приводя каждый_к_booleвому_типу_данных, и после первого TRUE, работа останавливается
+
+// если_все_значения_будут_истнинные(true)_то_результат_будет - последнее значение
+
 console.log(result) // Привет
 
 const rezult = null || '' || 100 || 200 || 300
@@ -73,10 +76,42 @@ console.log(rezult)
 // Например: 1
 // let rain = false;
 // console.log(!rain); //true
-
 // Пример 2:
 // let rain = true;
 // console.log(!rain); // false
+
+console.log(!'') // true
+console.log(!'Привет') // false
+console.log(!0) // true
+console.log(!111) // false
+
+console.log(Boolean(0)) // false // console.log(!!0)
+console.log(Boolean(1)) // true // concole.log(!!1)
+console.log(Boolean('')) // false // console.log(!!'')
+console.log(Boolean(' ')) // true // console.log(!!' ')
+
+/* ?? -( nullish coalescing ) Оператор нулевого слияния */
+const a = null
+const b = 100
+const result1 = a || b
+const result2 = a ?? b /* Читаем: Если a не null и не undefined -> взять a, иначе -> взять b */ 
+
+console.log(result1) // 100
+console.log(result2) // 100
+
+/* Главная_Разница:
+
+|| -> проверяет все false-значения:
+false
+0
+null
+undefined
+NaN
+
+?? -> проверяет только:
+null
+undefined
+*/
 
 // ДЗ 9
 
