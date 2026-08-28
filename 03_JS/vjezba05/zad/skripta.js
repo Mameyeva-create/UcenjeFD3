@@ -1,13 +1,12 @@
 const rezultat = document.getElementById('rezultat')
 document.getElementById('izvedi').addEventListener('click', () => {
-    // ovaj kod će se izvoditi svaki puta kada korisnik klikne na
-    // gumb Izvedi
-    // resetirati ću rezultat
+    /* ovaj kod će se izvoditi svaki puta kada korisnik klikne na
+    gumb Izvedi */
+    // resetirati ću rezultat -> Обновляю результат
     rezultat.innerHTML = ''
     rezultat.style.color = 'black'
 
     // varijable u kojima je tekst koje je korisnik unio
-
     const aString = document.getElementById('a').value
     const bString = document.getElementById('b').value
     const cString = document.getElementById('c').value
@@ -35,18 +34,18 @@ document.getElementById('izvedi').addEventListener('click', () => {
             return
         }
         // ja kao programer sam ovdje 100% siguran da su a i b brojevi
-        rezultat.innerHTML = a >= b ? a : b
+        rezultat.innerHTML = a > b ? a : b
         rezultat.style.color = 'green'
 
         // kraj 1. zadatka
     }
     if (zadatak === '2') {
         // početak 2. zadatka
-        // 1. Превращаем текстовые строки в реальные числа
+        //  Превращаем текстовые строки в реальные числа
         const a = Number(aString)
         const b = Number(bString)
         const c = Number(cString)
-        // 2. Проверяем по очереди, все ли они являются числами
+        //  Проверяем по очереди, все ли они являются числами
         if (!a) {
             rezultat.innerHTML = 'A nije broj'
             rezultat.style.color = 'red'
@@ -62,10 +61,10 @@ document.getElementById('izvedi').addEventListener('click', () => {
             rezultat.style.color = 'red'
             return
         }
-        // 3. Вычисляем самое большое чмсло с помощью встроенной функции Math.max
+        //  Вычисляем самое большое число с помощью встроенной функции Math.max
         const najveci = Math.max(a, b, c)
 
-        // 4. Показываем результат пользователю красивым зеленым цветом
+        //  Показываем результат пользователю красивым зеленым цветом
         rezultat.innerHTML = najveci
         rezultat.style.color = 'green'
 

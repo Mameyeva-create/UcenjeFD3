@@ -1,4 +1,4 @@
-/* УРОК 11. ВОЗВРАЩАЕМОЕ ЗНАЧЕНИЕ (return)*/
+/* УРОК 11. ВОЗВРАЩАЕМОЕ ЗНАЧЕНИЕ (return) */
 
 // Для возвращеня результата, чтобы использовать его дальше, существует return
 
@@ -15,6 +15,28 @@
 //     return a * b;
 // }
 // console.log(multiply(4, 5)); // 20
+
+//Пример1:
+function getAgeType(age) {
+    if (typeof age !== 'number') {
+        return 'Возраст указан некорректно'
+    }
+    if (age < 1 || age > 125) {
+        return 'Такого возраста не может быть'
+    }
+    if (age < 18) {
+        return('Несовершеннолетний')
+    }
+    return 'Взрослый'
+}
+console.log(getAgeType(30))
+
+// Пример2:
+function getSecretMessege(name) {
+    if (!name) return // ПРОВЕРКА НА ПРАВИЛЬНО ВВОДИМЫЕ ДАННЫЕ
+    return `О, а я тебя знаю! Ты же тот самый ${name}?`
+}
+console.log(getSecretMessege('')) 
 
 // // Пример:
 // function test(){
