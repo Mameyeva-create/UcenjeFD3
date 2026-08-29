@@ -7,7 +7,7 @@ document.getElementById('izvedi').addEventListener('click', () => {
 
     switch (zad) {
         case 1:
-            // početak 1 zadatka
+            // Početak 1 zadatka
             if (!aString) {
                 rez.innerHTML = 'Obavezan unos'
                 rez.style.color = 'red'
@@ -24,16 +24,16 @@ document.getElementById('izvedi').addEventListener('click', () => {
                     break
                 case 'pauza':
                     rez.innerHTML = 'Pauziranje programa'
-                    rez.style.color = 'antique'
+                    rez.style.color = 'orange'
                     break
                 default:
                     rez.innerHTML = 'Neodgovarajuća komanda'
                     rez.style.color = 'red'
             }
-            // završio 1. zadatak
+            // Završio 1. zadatak
             break
         case 2:
-            // počinje 2. zadatak 
+            // Počinje 2. zadatak 
             if (!aString) {
                 rez.innerHTML = 'Obavezan unos'
                 rez.style.color = 'red'
@@ -58,10 +58,82 @@ document.getElementById('izvedi').addEventListener('click', () => {
                     break
                 default:
                     rez.innerHTML = 'Unesi A, B, C, D ili F'
-                    rez.style.color ='red'
+                    rez.style.color = 'red'
             }
-        // završio 2. zadatak
-        break
+            // Završio 2. zadatak
+            break
+        case 3:
+            // Počinje 3. zadatak 
+            const ocjena = Number(aString)
+
+            if (aString === '' || Number.isNaN(ocjena)) {
+                rez.innerHTML = 'Unesi broj'
+                rez.style.color = 'black'
+                return
+            }
+
+            switch (true) {
+                case ocjena < 50: {
+                    rez.innerHTML = 'Nedovolian'
+                    rez.style.color = 'red'
+                    break
+                }
+                case ocjena >= 50 && ocjena <= 64: {
+                    rez.innerHTML = 'Dovoljan'
+                    rez.style.color = 'orange'
+                    break
+                }
+                case ocjena >= 65 && ocjena <= 79: {
+                    rez.innerHTML = 'Dobar'
+                    rez.style.color = 'pink'
+                    break
+                }
+                case ocjena >= 80 && ocjena <= 89: {
+                    rez.innerHTML = 'Vrlo dobar'
+                    rez.style.color = 'blue'
+                    break
+                }
+                case ocjena >= 90 && ocjena <= 100: {
+                    rez.innerHTML = 'Odlican'
+                    rez.style.color = 'green'
+                    break
+                }
+                default:
+                    rez.innerHTML = 'Untsi broj od 0 do 100'
+                    rez.style.color = 'red'
+
+                    // Završio 3. zadatak
+                    break
+            }
+        case 4:
+            // Počinje 4. zadatak
+            const ime = aString.toLowerCase()
+/* toLowerCase() приведет введенный текст к одному регистру, и :
+janjetina
+Janjetina
+JANJETINA
+ все варианты будут работать */
+            switch (ime) {
+                case 'janjetina':
+                case 'svinjetina':
+                case 'teletina':
+                    rez.innerHTML = '🥩 Meso'
+rez.style.color = 'pink'
+                    break
+                case 'jabuka':
+                case 'kruška':
+                case 'šljiva':
+                case 'jagoda':
+                    rez.innerHTML = '🍎 Voće'
+rez.style.color = 'green'
+                    break
+                default:
+                    rez.innerHTML = ' ⚠️ Ne može se odrediti'
+                    rez.style.color = 'black'
+                    break
+            }
+        // Završio 4. zadatak
+
     }
 })
 

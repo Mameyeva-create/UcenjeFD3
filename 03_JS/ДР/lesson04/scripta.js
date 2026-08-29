@@ -25,17 +25,17 @@ console.log(10 % 3); // 1
 // УНАРНЫЕ ОПЕРАТОРЫ - К ОДНОМУ ОПЕРАНДУ (ЗНАЧЕНИЮ)
 
 // ОПЕРАТОР МИНУСА - ДЕЛАЕТ ЧИСЛО ОТРИЦАТЕЛЬНЫМ
- console.log(- 10)
+console.log(- 10)
 
- // ПЛЮСА
- console.log(+"3" + +"5") // 8
+// ПЛЮСА
+console.log(+"3" + +"5") // 8
 console.log("3" + "5") // "35"
 
 let count = 1
 count += 2 // 3 // count = count + 2 // count = 1 + 2
 count -= 5 // -4 //  count = 1 - 5 
 count *= 10 // 10 // 1 * 10
-count /=  3 // 0.33
+count /= 3 // 0.33
 console.log(count)
 
 let message = 'Привет'
@@ -55,12 +55,9 @@ console.log(coUnt)
 /* --i ПРЕФИКСНАЯ ФОРМА */
 
 
-
-
-
 // ИНКРИМЕНТ
 
-/* i++ ПОСТФИКСНАЯ ФОРМА  - Сначала_Использовать_потом_Увеличить */ 
+/* i++ ПОСТФИКСНАЯ ФОРМА  - Сначала_Использовать_потом_Увеличить */
 let couNt = 10
 couNt++ // 11
 couNt++ // 12
@@ -69,7 +66,7 @@ console.log(couNt)
 
 /* ++i ПРЕФИКСНАЯ ФОРМА - Сначала_Увеличить_потом_Использовать */
 let counT = 10
-let newCount = ++counT 
+let newCount = ++counT
 
 console.log(counT) // 11
 console.log(newCount) // 11

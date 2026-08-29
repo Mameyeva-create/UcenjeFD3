@@ -1,5 +1,8 @@
-// switch
-const ocjena = 5
+// switch je višestruko grananje
+// switch radi s swim tipovima podatka i provjerava s ===
+// sve što se može switch može i if
+
+const ocjena = 5 // ovdje je korisnik unio vrijednost
 
 switch (ocjena) {
     case 1:
@@ -17,7 +20,7 @@ switch (ocjena) {
     case 5:
         console.log('Izvrstan')
         break
-    default:
+    default: // по умолчанию -> если ничего из перечисленного не подошло, сделай вот это:
         console.log('Nije ocjena')
 }
 
@@ -28,7 +31,7 @@ switch (dan) {
     case 'Ponedjeljak':
     case 'Utorak':
     case 'Srijeda':
-    case 'Čenvrtak':
+    case 'Četvrtak':
     case 'Petak':
         console.log('Radni dan')
         break
