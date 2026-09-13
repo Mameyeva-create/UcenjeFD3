@@ -113,14 +113,45 @@ console.log(broja, b)
     console.log('Zadatak 4');
     /* 4. Ako ostane polje A i B prazno u rezultat upišite dva emojia po vlastitom izboru */
     // početak 4
-
+rezultat.innerHTML = ''
+    if (a.trim()=== '' && b.trim() === '') {
+      rezultat.innerHTML = '🎁🪎'
+    }
     // kraj 4
   },
   z5: (a, b) => {
     console.log('Zadatak 5');
-    /* 5. Osmislite zadatak sami i realizirajte ga */
+    /* 5. Osmislite zadatak sami i realizirajte ga.
+    Odredite jesu li brojevi uneseni u polja A i B pozitivni, negativni ili nula
+    */
     // početak 5
+rezultat.innerHTML = ''
+if (a.trim() === '' || b.trim() === '') {
+  rezultat.innerHTML = 'Unesite vrijednosti'
+  return
+}
+const broja = Number(a)
+const brojb = Number(b)
+// Проверяем если broja и brojb -> не Число(isNaN)
+if(isNaN(broja) || isNaN(brojb)) { 
+  rezultat.innerHTML = 'A i B moraju biti brojevi'
+  return
+}
+if (broja > 0) {
+  rezultat.innerHTML += 'A je pozitivan<br>' // += -> дает возможность проверить A, и после проверки В -> вывести оба значения
+} else if (broja < 0) {
+  rezultat.innerHTML += 'A je negativan<br>'
+} else {
+  rezultat.innerHTML += 'A je nula<br>'
+}
 
+if (brojb > 0) {
+  rezultat.innerHTML += 'B je pozitivan<br>'
+} else if (brojb < 0) {
+  rezultat.innerHTML += 'B je negativan<br>'
+} else {
+  rezultat.innerHTML += 'B je nula<br>'
+}
     // kraj 5
   }
   // ovdje dodajemo nove zadatke

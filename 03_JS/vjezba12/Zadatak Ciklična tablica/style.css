@@ -1,0 +1,395 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #303030;
+    color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* =====================================
+   GLAVNI KONTEJNER
+   ===================================== */
+.container {
+    min-height: 90vh;
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding: 30px;
+    background: #303030;
+}
+
+/* =====================================
+   ULAZ /  IZLAZ
+   ===================================== */
+.ulaz {
+    flex-shrink: 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #555;
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.ulaz span {
+    display: block;
+    height: 45px;
+    transform: rotate(-90deg);
+}
+
+.izlaz {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #555;
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.izlaz span {
+    display: block;
+    height: 45px;
+    transform: rotate(90deg);
+}
+
+/* =====================================
+   KONTROLE
+   ===================================== */
+.controls {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    flex: 0 0 320px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ddd;
+}
+
+input,
+select {
+    width: 100%;
+    height: 60px;
+    padding: 0 18px;
+    border: 2px solid #aaa;
+    border-radius: 12px;
+    background: #555;
+    color: #eee;
+    font-size: 22px;
+    font-weight: bold;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #48b94b;
+}
+
+/* =====================================
+   SELECT
+   ===================================== */
+.smjer-grupa select {
+    font-size: 16px;
+}
+
+/* =====================================
+   GUMB
+   ===================================== */
+button {
+    width: 100%;
+    height: 65px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 12px;
+    background: #48b94b;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #55c958;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+/* =====================================
+   REZULTAT
+   ===================================== */
+.rezultat-wrapper {
+    overflow: auto;
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rezultat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    max-width: 100%;
+    max-height: 85vh;
+}
+
+/* =====================================
+   TABLICA
+   ===================================== */
+table {
+    border-collapse: separate;
+    border-spacing: 6px;
+    margin: auto;
+}
+
+/* =====================================
+   ĆELIJE / КЛЕТКА
+   ===================================== */
+td .broj {
+    display: inline-block;
+    width: 4ch;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+td {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    min-width: 30px;
+    min-height: 30px;
+    border: 2px solid #aaa;
+    border-radius: 9px;
+    background: #303030;
+    color: #ddd;
+    text-align: center;
+    vertical-align: middle;
+    /* padding-right: 10px; */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* =======================================================
+   ZELENA PUTANJA / ДИНАМИЧЕСКИЕ СОЕДИНЕНИЯ МЕЖДУ ЯЧЕЙКАМИ
+   ======================================================= */
+td.connect-right::after,
+td.connect-left::after,
+td.connect-down::after,
+td.connect-up::after {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    background: #45c34a;
+}
+
+td.connect-right::after {
+    width: 14px;
+    height: 7px;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+td.connect-left::after {
+    width: 14px;
+    height: 7px;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+td.connect-down::after {
+    width: 7px;
+    height: 14px;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+}
+
+td.connect-up::after {
+    width: 7px;
+    height: 14px;
+    left: 50%;
+    top: -10px;
+    transform: translateX(-50%);
+}
+
+td.center-cell {
+    background: #666;
+}
+
+/* =====================================
+   GREŠKA
+   ===================================== */
+.error {
+    width: 100%;
+    padding: 15px;
+    color: #ff7777;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* =====================================
+   TABLET
+   ===================================== */
+@media (max-width: 1200px) {
+    .container {
+        padding: 25px;
+    }
+
+    .controls {
+        width: 280px;
+        flex-basis: 280px;
+    }
+
+    td {
+        width: 65px;
+        height: 65px;
+        font-size: 20px;
+    }
+}
+
+/* =====================================
+   MANJI TABLET
+   ===================================== */
+@media (max-width: 900px) {
+    body {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .container {
+        min-height: auto;
+        padding: 20px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 25px;
+    }
+
+    .ulaz,
+    .izlaz {
+        display: none;
+    }
+
+    .controls {
+        width: 100%;
+        max-width: 450px;
+        flex-basis: auto;
+        margin: 0 auto;
+    }
+
+    .rezultat-wrapper {
+        width: 100%;
+    }
+
+    #rezultat {
+        max-height: none;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    table {
+        margin: 0 auto;
+    }
+
+    td {
+        width: 55px;
+        height: 55px;
+        font-size: 18px;
+    }
+}
+
+/* =====================================
+   MOBITEL
+   ===================================== */
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+    }
+
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        padding: 15px;
+    }
+
+    .controls {
+        max-width: none;
+    }
+
+    label {
+        font-size: 17px;
+    }
+
+    input,
+    select {
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .smjer-grupa select {
+        font-size: 14px;
+    }
+
+    button {
+        height: 55px;
+        font-size: 17px;
+    }
+
+    #rezultat {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    table {
+        border-spacing: 4px;
+    }
+
+    td {
+        width: 48px;
+        height: 48px;
+        font-size: 16px;
+        border-radius: 7px;
+    }
+
+    td.connect-right::after,
+    td.connect-left::after {
+        width: 10px;
+        height: 5px;
+    }
+
+    td.connect-down::after,
+    td.connect-up::after {
+        width: 5px;
+        height: 10px;
+    }
+}
