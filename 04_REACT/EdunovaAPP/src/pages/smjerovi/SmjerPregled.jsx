@@ -1,9 +1,9 @@
 
 
 export default function SmjerPregled(){
-    return(
+    return (
         <>
-        Ovdje doďe pregled smjerova
+            Ovdje dođe pregled smjerova
         </>
     )
 }
