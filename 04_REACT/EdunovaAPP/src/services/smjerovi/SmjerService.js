@@ -4,6 +4,9 @@ import { smjerovi } from "./SmjerPodaci";
 async function get(){
     return {data: [...smjerovi]} // [...] stvara novi niz s istim podacima
 }
+
+
+
 export default{
     get
 }

@@ -1,21 +1,23 @@
 import { useEffect, useState } from "react"
-import SmjerServise from "../../services/smjerovi/SmjerService"
+import SmjerService from "../../services/smjerovi/SmjerService"
 
 
 export default function SmjerPregled(){
 
-const [smjerovi, setSmjerovi] = useState([])
+    const [smjerovi, setSmjerovi] = useState([])
 
-useEffect(()=>{
-console.log('Dosao na pregled smjerova')
-ucitajSmjerove()
-},[])
-async function ucitajSmjerove(){
-    await SmjerServise.get().then((odgovor)=>{
-        // console.table(odgovor.data)
-        setSmjerovi(odgovor.data)
-    })
-}
+    useEffect(()=>{
+        console.log('Došao na pregled smjerova')
+        ucitajSmjerove()
+    },[])
+
+    async function ucitajSmjerove(){
+        await SmjerService.get().then((odgovor)=>{
+            //console.table(odgovor.data)
+            setSmjerovi(odgovor.data)
+        })
+    }
+
 
     return (
         <>
