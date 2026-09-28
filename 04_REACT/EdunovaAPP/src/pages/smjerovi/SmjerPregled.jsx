@@ -5,19 +5,21 @@ import { GrValidate } from "react-icons/gr"
 import { FcApproval, FcDisapprove } from "react-icons/fc"
 import { NumericFormat } from "react-number-format"
 import FormatDatuma from "../../components/FormatDatuma"
+import { RouteNames } from "../../constants"
+import { Link } from "react-router-dom"
 
 
 export default function SmjerPregled(){
 
     const [smjerovi, setSmjerovi] = useState([])
 
-    useEffect(()=>{
+    useEffect(() => {
         console.log('Došao na pregled smjerova')
         ucitajSmjerove()
-    },[])
+    }, [])
 
     async function ucitajSmjerove(){
-        await SmjerService.get().then((odgovor)=>{
+        await SmjerService.get().then((odgovor) => {
             //console.table(odgovor.data)
             setSmjerovi(odgovor.data)
         })
@@ -26,7 +28,9 @@ export default function SmjerPregled(){
 
     return (
         <>
-          
+          <Link to={RouteNames.SMJEROVI_NOVI}>
+          Dodavanje novog smjera
+          </Link>
           <Table hover striped bordered>
             <thead>
                 <tr>
