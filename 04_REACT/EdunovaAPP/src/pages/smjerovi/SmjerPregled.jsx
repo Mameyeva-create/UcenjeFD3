@@ -29,7 +29,7 @@ export default function SmjerPregled() {
     return (
         <>
             <Link to={RouteNames.SMJEROVI_NOVI}
-            className="btn btn-success w-100 my-3">
+                className="btn btn-success w-100 my-3">
                 Dodavanje novog smjera
             </Link>
             <Table hover striped bordered>
@@ -46,7 +46,7 @@ export default function SmjerPregled() {
                     {smjerovi && smjerovi.map((smjer) => (
                         <tr key={smjer.sifra}>
                             <td className="lead">{smjer.naziv}</td>
-                            <td className="text-end">{smjer.trajanje /* text-end dolazi iz bootstrap */}</td> 
+                            <td className="text-end">{smjer.trajanje /* text-end dolazi iz bootstrap */}</td>
                             <td className="desno">  {/* desno dolazi iz mog CSS-a */}
                                 <NumericFormat
                                     value={smjer.cijena}

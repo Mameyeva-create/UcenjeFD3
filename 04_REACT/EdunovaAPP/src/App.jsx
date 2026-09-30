@@ -7,6 +7,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import SmjerPregled from './pages/smjerovi/SmjerPregled'
 import SmjerNovi from './pages/smjerovi/SmjerNovi'
+import Raspored from './pages/raspored/Raspored'
 
 
 
@@ -18,6 +19,7 @@ function App() {
     <Container className='app'>
       <Routes>
         <Route path={RouteNames.HOME} element={<Home />} />
+        <Route path={RouteNames.RASPORED} element={<Raspored />} />
         <Route path={RouteNames.SMJEROVI} element={<SmjerPregled />} />
         <Route path={RouteNames.SMJEROVI_NOVI} element={<SmjerNovi />} />
       </Routes>
