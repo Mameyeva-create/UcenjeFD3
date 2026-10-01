@@ -1,8 +1,13 @@
+import { data } from "react-router-dom";
 import { smjerovi } from "./SmjerPodaci";
 
 // 1/4 Read od CRUD
 async function get(){
     return {data: [...smjerovi]} // [...] stvara novi niz s istim podacima
+}
+
+async function getBySifra(sifra){
+    return{data: smjerovi.find(s => s.sifra === parseInt(sifra))}
 }
 
 
@@ -20,5 +25,6 @@ async function dodaj(smjer){
 
 export default{
     get,
-    dodaj
+    dodaj,
+    getBySifra
 }
