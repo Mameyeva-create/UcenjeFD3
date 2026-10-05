@@ -1,4 +1,3 @@
-import { data } from "react-router-dom";
 import { smjerovi } from "./SmjerPodaci";
 
 // 1/4 Read od CRUD
@@ -7,7 +6,7 @@ async function get(){
 }
 
 async function getBySifra(sifra){
-    return{data: smjerovi.find(s => s.sifra === parseInt(sifra))}
+    return {data: smjerovi.find(s => s.sifra === parseInt(sifra))}    
 }
 
 
@@ -20,11 +19,21 @@ async function dodaj(smjer){
     }
     smjerovi.push(smjer)
 }
+// 3/4 
+async function promijeni(sifra,smjer){
+const index = nadiIndex(sifra)
+smjerovi[index] = {...smjerovi[index],...smjer}
+}
+
+function nadiIndex(sifra){
+    return smjerovi.findIndex(s => s.sifra === parseInt(sifra))
+}
 
 
 
 export default{
     get,
     dodaj,
-    getBySifra
+    getBySifra,
+    promijeni
 }

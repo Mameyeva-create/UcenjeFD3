@@ -12,7 +12,7 @@ import { RouteNames } from "../../constants"
 export default function SmjerPregled() {
 
     const [smjerovi, setSmjerovi] = useState([])
-const navigate = useNavigate()
+    const navigate = useNavigate()
 
     useEffect(() => {
         //console.log('Došao na pregled smjerova')
@@ -81,7 +81,6 @@ const navigate = useNavigate()
 
                             </td>
                             <td>
-                                
                                 <Button onClick={()=>{navigate(`/smjerovi/${smjer.sifra}`)}}>
                                     Promjeni
                                 </Button>

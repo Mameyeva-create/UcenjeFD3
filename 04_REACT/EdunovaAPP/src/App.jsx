@@ -23,8 +23,7 @@ function App() {
         <Route path={RouteNames.RASPORED} element={<Raspored />} />
         <Route path={RouteNames.SMJEROVI} element={<SmjerPregled />} />
         <Route path={RouteNames.SMJEROVI_NOVI} element={<SmjerNovi />} />
-        <Route path={RouteNames.SMJEROVI_PROMJENA} element={<SmjerPromjena/>} />
-        
+        <Route path={RouteNames.SMJEROVI_PROMJENA} element={<SmjerPromjena />} />
       </Routes>
     </Container>
     <hr />
