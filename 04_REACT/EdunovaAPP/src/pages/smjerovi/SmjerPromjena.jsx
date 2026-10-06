@@ -34,7 +34,6 @@ export default function SmjerPromjena() {
 
     function odradiSubmit(e) { // e je event
         e.preventDefault()
-        
         const podaci = new FormData(e.target)
         promijeni({
             naziv: podaci.get('naziv'),
