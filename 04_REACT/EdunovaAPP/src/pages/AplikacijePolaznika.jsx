@@ -15,7 +15,7 @@ export default function AplikacijePolaznika() {
             "git": "https://github.com/jeloseki",
             "url": "https://edunova1.origo.hr",
             "aplikacija": "Mlin",
-            "opis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a tellus eget sapien semper commodo a eu ipsum. Fusce in dapibus mi. In purus lacus, iaculis euismod porttitor a, dapibus sit amet purus."
+            "opis": "Uskoči u Mlin! Bilo da igraš opušteno ili tražiš žestoku konkurenciju, čekaju te PVE i PVP mečevi, napredovanje kroz rangove, napeti turniri i još puno, puno toga. Zaigraj odmah!"
         },
         {
             "ime": "Andreas",
@@ -23,7 +23,7 @@ export default function AplikacijePolaznika() {
             "git": "https://github.com/androwebgraphic",
             "url": "https://edunova4.origo.hr",
             "aplikacija": "Aukcije",
-            "opis": "NAKNADNO"
+            "opis": "“Aukcije ” je aplikacija koja pomaže strastvenim kolekcionarima da mogu kupovati ili prodavati predmete. Mogu dodati, promijeniti ili obrisati određene predmete koje su postavili."
         },
         {
             "ime": "Olha",
@@ -31,7 +31,7 @@ export default function AplikacijePolaznika() {
             "git": "https://github.com/Mameyeva-create",
             "url": "https://edunova5.origo.hr",
             "aplikacija": "Priručna kuharica",
-            "opis": "NAKNADNO"
+            "opis": "Priručna kuharica donosi jednostavne i ukusne recepte za svaki dan. Otkrijte nova jela, pronađite inspiraciju za kuhanje, organizirajte omiljene recepte i pripremite ukusne obroke prema namirnicama koje imate kod kuće."
         },
         {
             "ime": "Igor",
@@ -63,7 +63,7 @@ export default function AplikacijePolaznika() {
             "git": "https://github.com/tjurcevicos",
             "url": "https://edunova3.origo.hr",
             "aplikacija": "Virtualna garaža za motocikle",
-            "opis": "NAKNADNO"
+            "opis": "Virtualna garaža za motocikle aplikacija je za vođenje evidencije vozila, servisa, goriva, troškova i podsjetnika. Omogućuje praćenje održavanja, statistike i putovanja na jednom mjestu."
         },
         {
             "ime": "Juraj",
@@ -156,14 +156,15 @@ export default function AplikacijePolaznika() {
     ]
 
 
+
     const polazniciFD4 = [
         {
             "ime": "Marta",
             "prezime": "Ðukić",
-            "git": "https://github.com/mDukic658",
+            "git": "https://github.com/mDukic658/PlanerPutovanja",
             "url": "https://edunova31.origo.hr",
             "aplikacija": "Planer putovanja",
-            "opis": "NAKNADNO"
+            "opis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at sapien et massa vestibulum tempor. Morbi consequat enim nec purus pharetra tincidunt. Pellentesque ullamcorper tortor ac eleifend."
         },
         {
             "ime": "Anamaria",
@@ -171,7 +172,7 @@ export default function AplikacijePolaznika() {
             "git": "https://github.com/moritzanamaria",
             "url": "https://edunova33.origo.hr",
             "aplikacija": "PawAlert",
-            "opis": "NAKNADNO"
+            "opis": "PawAlert je React aplikacija za prijavu nestalih i uočenih životinja. Interaktivna karta i pregled prijava olakšavaju dijeljenje informacija, praćenje slučajeva i pomoć životinjama u Osijeku."
         },
         {
             "ime": "Anita",
@@ -187,7 +188,7 @@ export default function AplikacijePolaznika() {
             "git": "https://github.com/inforemont",
             "url": "https://edunova35.origo.hr",
             "aplikacija": "Fishijada",
-            "opis": "NAKNADNO"
+            "opis": "Saznajte sve o fišijadama u Baranji, regionalnim natjecanjima i ponosu regije - najvećoj fišijadi u Belom Manastiru. Aplikacija je nastala iz neizmjerne ljubavi prema fišu i našoj Baranji."
         },
         {
             "ime": "Đurđica",
@@ -203,7 +204,7 @@ export default function AplikacijePolaznika() {
             "git": "https://github.com/GeorgeDemianGreen",
             "url": "https://edunova42.origo.hr",
             "aplikacija": "Mačke",
-            "opis": "NAKNADNO"
+            "opis": "Ova web aplikacija namijenjena je ljubiteljima mačaka koji žele predstaviti svoje ljubimce i sudjelovati u zabavnom natjecanju za najpopularniju mačku. Aplikacija omogućuje jednostavan unos mačaka, pregled svih prijavljenih mačaka te glasanje za one koje se korisnicima najviše sviđaju."
         },
         {
             "ime": "Svebor",
@@ -362,7 +363,7 @@ export default function AplikacijePolaznika() {
                         </Button>
                     </div>
                     <hr />
-                    <p style={{textAlign: 'justify'}}>
+                    <p style={{textAlign: 'justify', fontSize: '0.8rem'}}>
                         {p.opis}
                     </p>
                 </Card.Body>
