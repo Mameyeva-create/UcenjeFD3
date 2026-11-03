@@ -134,7 +134,7 @@ export default function AplikacijePolaznika() {
             "prezime": "Zagorec Mrđa",
             "git": "https://github.com/EverynZ",
             "url": "https://edunova15.origo.hr",
-            "aplikacija": "NIJE DEFINIRANO",
+            "aplikacija": "Event-Management.app",
             "opis": "NAKNADNO"
         },
         {
@@ -142,8 +142,8 @@ export default function AplikacijePolaznika() {
             "prezime": "Županić",
             "git": "https://github.com/davor-zupanic",
             "url": "https://edunova57.origo.hr",
-            "aplikacija": "NIJE DEFINIRANO",
-            "opis": "NAKNADNO"
+            "aplikacija": "Live produkcija",
+            "opis": "Aplikacija za planiranje live prijenosa sportskih događaja i praćenje opreme. Prikazuje spremnost produkcije: je li za događaj dodijeljeno dovoljno kamera i dron, uz upozorenja o neispravnoj opremi."
         },
         {
             "ime": "Ian",
@@ -180,7 +180,7 @@ export default function AplikacijePolaznika() {
             "git": "https://github.com/Anita2403",
             "url": "https://edunova38.origo.hr",
             "aplikacija": "Galerija slika",
-            "opis": "NAKNADNO"
+            "opis": "Galerija slika je aplikacija koja vam omogućuje pogled u moj vizualni svijet. Ja sam umjetnik-amater koji kroz boje, teksture i emocije prenosi priče na platno, ali i druge medije. Svako djelo nosi jedinstvenu energiju i dio moje duše. Istražite galeriju i pronađite djelo koje rezonira s vama i vašim prostorom."
         },
         {
             "ime": "Dragan",
