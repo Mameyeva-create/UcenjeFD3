@@ -16,10 +16,20 @@ export const RouteNames = {
     GRUPE_NOVI: '/grupe/novi',
     GRUPE_PROMJENA: '/grupe/:sifra',
 
+    OPERATERI: '/operateri',
+    OPERATERI_NOVI: '/operateri/novi',
+    OPERATERI_PROMJENA: '/operateri/:sifra',
+    OPERATERI_PROMJENA_LOZINKE: '/operateri/:sifra/lozinka',
+
     GENERIRANJE_PODATAKA: '/generiraj-podatke',
+
+    LOGIN: '/login',
+    REGISTRACIJA: '/registracija',
+
+    NADZORNA_PLOCA: '/nadzorna-ploca',
     
     APLIKACIJE_POLAZNIKA: '/aplikacije-polaznika'
 }
 
 // memorija, localStorage, firebase
-export const DATA_SOURCE = 'localStorage'
+export const DATA_SOURCE = 'memorija'
