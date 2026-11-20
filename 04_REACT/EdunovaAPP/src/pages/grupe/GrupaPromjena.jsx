@@ -6,6 +6,7 @@ import PolaznikService from "../../services/polaznici/PolaznikService"
 import { Button, Col, Form, Row, Container, Card, Table } from "react-bootstrap"
 import { RouteNames } from "../../constants"
 import { ShemaGrupa } from "../../schemas/ShemaGrupa"
+import useLoading from "../../hooks/useLoading"
 
 export default function GrupaPromjena() {
 
@@ -19,11 +20,14 @@ export default function GrupaPromjena() {
     const [prikaziAutocomplete, setPrikaziAutocomplete] = useState(false)
     const [odabraniIndex, setOdabraniIndex] = useState(-1)
     const [errors, setErrors] = useState({});
+    const { showLoading, hideLoading } = useLoading()
 
     useEffect(() => {
+        showLoading()
         ucitajGrupu()
         ucitajSmjerove()
         ucitajPolaznike()
+        hideLoading()
     }, [])
 
     useEffect(() => {
@@ -104,9 +108,11 @@ export default function GrupaPromjena() {
     }
 
     async function promijeni(grupa) {
+        showLoading()
         await GrupaService.promijeni(params.sifra, grupa).then(() => {
-            navigate(RouteNames.GRUPE)
+            hideLoading()
         })
+        navigate(RouteNames.GRUPE)
     }
 
     function odradiSubmit(e) {
@@ -133,7 +139,7 @@ export default function GrupaPromjena() {
 
         promijeni({
             naziv: podaci.get('naziv'),
-            smjer: parseInt(podaci.get('smjer')),
+            smjer: podaci.get('smjer'),
             polaznici: odabraniPolaznici.map(p => p.sifra)
         })
     }
@@ -180,7 +186,7 @@ export default function GrupaPromjena() {
                                         <Form.Label className="fw-bold">Smjer</Form.Label>
                                         <Form.Select name="smjer"
                                             value={grupa.smjer || ''}
-                                            onChange={(e) => setGrupa({ ...grupa, smjer: parseInt(e.target.value) })} isInvalid={!!errors.smjer}
+                                            onChange={(e) => setGrupa({ ...grupa, smjer: e.target.value })} isInvalid={!!errors.smjer}
                                             onFocus={() => ocistiGresku('smjer')}>
                                             <option value="">Odaberite smjer</option>
                                             {smjerovi && smjerovi.map((smjer) => (

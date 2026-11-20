@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react"
 import PolaznikService from "../../services/polaznici/PolaznikService"
-import { Row, Col, Card, Button, Container, Pagination, InputGroup, Form } from "react-bootstrap"
+import { Row, Col, Card, Button, Pagination, InputGroup, Form } from "react-bootstrap"
 import { Link, useNavigate } from "react-router-dom"
 import { RouteNames } from "../../constants"
 import { FaEdit, FaSearch, FaTrash } from "react-icons/fa"
 import useBreakpoint from "../../hooks/useBreakpoint"
+import useLoading from "../../hooks/useLoading"
+import useModal from "../../hooks/useModal"
 
 export default function PolaznikPregled() {
 
@@ -17,32 +19,38 @@ export default function PolaznikPregled() {
     const [uvjetPretrazivanja, setUvjetPretrazivanja] = useState('')
     const velicinaStranice = 4
     const sirina = useBreakpoint();
-
+    const { showLoading, hideLoading } = useLoading()
+    const { showModal } = useModal()
     useEffect(() => {
 
         ucitajPolaznike(trenutnaStranica, velicinaStranice, uvjetPretrazivanja)
     }, [trenutnaStranica, uvjetPretrazivanja])
 
     async function ucitajPolaznike(stranica) {
+        showLoading()
         await PolaznikService.dohvatiStranicu(stranica, velicinaStranice, uvjetPretrazivanja).then((odgovor) => {
             postaviPolaznike(odgovor.data)
             postaviUkupnoStranica(odgovor.ukupnoStranica)
             postaviUkupnoStavki(odgovor.ukupnoStavki)
+            hideLoading()
         })
     }
 
     async function brisanje(sifra) {
-        if (!confirm('Sigurno obrisati?')) return;
-        await PolaznikService.obrisi(sifra);
+        showModal('Sigurno obrisati polaznika?', async () => {
+            showLoading()
+            await PolaznikService.obrisi(sifra);
 
-        const noveUkupneStavke = ukupnoStavki - 1;
-        const noveUkupneStranice = Math.ceil(noveUkupneStavke / velicinaStranice);
+            const noveUkupneStavke = ukupnoStavki - 1;
+            const noveUkupneStranice = Math.ceil(noveUkupneStavke / velicinaStranice);
 
-        if (trenutnaStranica > noveUkupneStranice && noveUkupneStranice > 0) {
-            postaviTrenutnuStranicu(noveUkupneStranice);
-        } else {
-            ucitajPolaznike(trenutnaStranica);
-        }
+            if (trenutnaStranica > noveUkupneStranice && noveUkupneStranice > 0) {
+                postaviTrenutnuStranicu(noveUkupneStranice);
+            } else {
+                ucitajPolaznike(trenutnaStranica);
+            }
+            hideLoading()
+        })
     }
 
     function promijeniStranicu(stranica) {

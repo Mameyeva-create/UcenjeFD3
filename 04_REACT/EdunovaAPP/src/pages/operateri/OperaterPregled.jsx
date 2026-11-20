@@ -4,11 +4,15 @@ import { Table, Button } from "react-bootstrap"
 import { Link, useNavigate } from "react-router-dom"
 import { IME_APLIKACIJE, RouteNames } from "../../constants"
 import { FaEdit, FaTrash, FaKey } from "react-icons/fa"
+import useLoading from "../../hooks/useLoading"
+import useModal from "../../hooks/useModal"
 
 export default function OperaterPregled() {
 
     const navigate = useNavigate()
     const [operateri, setOperateri] = useState([])
+    const { showModal } = useModal()
+    const { showLoading, hideLoading } = useLoading()
 
     useEffect(()=>{document.title='Operateri, ' + IME_APLIKACIJE})
 
@@ -17,24 +21,28 @@ export default function OperaterPregled() {
     }, [])
 
     async function ucitajOperatere() {
+        showLoading()
         await OperaterService.get().then((odgovor) => {
             if (!odgovor.success) {
                 alert('Nije implementiran servis')
                 return
             }
             setOperateri(odgovor.data)
+            hideLoading()
         })
     }
 
     async function brisanje(sifra) {
-        if (!confirm('Sigurno obrisati operatera?')) return
-        
-        const rezultat = await OperaterService.obrisi(sifra)
-        if (rezultat.success) {
-            ucitajOperatere()
-        } else {
-            alert(rezultat.message || 'Greška pri brisanju')
-        }
+        showModal('Sigurno obrisati operatera?', async () => {
+            showLoading()
+            const rezultat = await OperaterService.obrisi(sifra)
+            if (rezultat.success) {
+                ucitajOperatere()
+            } else {
+                alert(rezultat.message || 'Greška pri brisanju')
+            }
+            hideLoading()
+        })
     }
 
     return (

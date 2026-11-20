@@ -3,10 +3,12 @@ import { useNavigate } from "react-router-dom"
 import { ShemaLogin } from "../../schemas/ShemaOperater"
 import { useState, useRef } from "react" // Dodan useRef
 import useAuth from "../../hooks/useAuth"
+import useLoading from "../../hooks/useLoading"
 
 export default function Login() {
     const [errors, setErrors] = useState({})
     const { login } = useAuth();
+    const { showLoading, hideLoading } = useLoading()
     
     const formaRef = useRef(null);
 
@@ -24,8 +26,9 @@ export default function Login() {
             setErrors({ email: 'Kombinacija email i lozinka ne odgovaraju' })
             return
         }
-
+        showLoading()
         login(podaci.get('email'), podaci.get('lozinka'))
+        hideLoading()
     }
 
     const popuniPodatke = (email, lozinka) => {
